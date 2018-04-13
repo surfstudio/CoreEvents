@@ -21,6 +21,8 @@
 		4F7C649C2080A823008EF537 /* PresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C649B2080A823008EF537 /* PresentEvent.swift */; };
 		4F7C649E2080A9EB008EF537 /* EmptyPresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C649D2080A9EB008EF537 /* EmptyPresentEvent.swift */; };
 		4F7C64A12080AC5F008EF537 /* PresentEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C64A02080AC5F008EF537 /* PresentEventTest.swift */; };
+		4F7C64A42080AE5C008EF537 /* PastEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C64A32080AE5C008EF537 /* PastEvent.swift */; };
+		4F7C64A92080AF94008EF537 /* PastEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C64A82080AF94008EF537 /* PastEventTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		4F7C649B2080A823008EF537 /* PresentEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentEvent.swift; sourceTree = "<group>"; };
 		4F7C649D2080A9EB008EF537 /* EmptyPresentEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPresentEvent.swift; sourceTree = "<group>"; };
 		4F7C64A02080AC5F008EF537 /* PresentEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentEventTest.swift; sourceTree = "<group>"; };
+		4F7C64A32080AE5C008EF537 /* PastEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEvent.swift; sourceTree = "<group>"; };
+		4F7C64A82080AF94008EF537 /* PastEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEventTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		4F5259BE208095760010C95F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4F7C64A22080AE48008EF537 /* PastEvents */,
 				4F7C649A2080A810008EF537 /* PresentEvents */,
 				4F7C647E20809931008EF537 /* FutureEvents */,
 				4F5259C32080960B0010C95F /* Protocols */,
@@ -133,6 +138,7 @@
 		4F7C648B20809EB6008EF537 /* EventKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				4F7C64A72080AF7D008EF537 /* PastEventTests */,
 				4F7C649F2080AC44008EF537 /* PresentEventTests */,
 				4F7C649520809F10008EF537 /* FutureEventTests */,
 				4F7C648E20809EB6008EF537 /* Info.plist */,
@@ -165,6 +171,22 @@
 				4F7C64A02080AC5F008EF537 /* PresentEventTest.swift */,
 			);
 			path = PresentEventTests;
+			sourceTree = "<group>";
+		};
+		4F7C64A22080AE48008EF537 /* PastEvents */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C64A32080AE5C008EF537 /* PastEvent.swift */,
+			);
+			path = PastEvents;
+			sourceTree = "<group>";
+		};
+		4F7C64A72080AF7D008EF537 /* PastEventTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C64A82080AF94008EF537 /* PastEventTests.swift */,
+			);
+			path = PastEventTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7C648420809D8B008EF537 /* FutureEmptyEvent.swift in Sources */,
+				4F7C64A42080AE5C008EF537 /* PastEvent.swift in Sources */,
 				4F7C649C2080A823008EF537 /* PresentEvent.swift in Sources */,
 				4F5259C5208096200010C95F /* Event.swift in Sources */,
 				4F7C648220809AF9008EF537 /* FutureValueEvent.swift in Sources */,
@@ -293,6 +316,7 @@
 			files = (
 				4F7C64A12080AC5F008EF537 /* PresentEventTest.swift in Sources */,
 				4F7C64992080A6ED008EF537 /* FutureValueEventTest.swift in Sources */,
+				4F7C64A92080AF94008EF537 /* PastEventTests.swift in Sources */,
 				4F7C648D20809EB6008EF537 /* FutureEventTest.swift in Sources */,
 				4F7C64972080A565008EF537 /* FutureEmptyEventTest.swift in Sources */,
 			);
