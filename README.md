@@ -4,7 +4,7 @@ Small swift events kit that provides some base types of events:
 - `PresentEvent`
 - `PastEvent`
 
-Any this type can implement some Event protocols:
+Each this type may implement some Event protocols:
 - `Event` it's a object that contains any listners (swift clisures) with one templte parameter - emited value type.
 - `EmptyEvent` it's syntactic shugar for `Event` with Void template parameter.
 - `ValueEvent` it's event, that can contain **only** one listner and this listner should get and **return** value. This protocol contains contains two template parameters.
