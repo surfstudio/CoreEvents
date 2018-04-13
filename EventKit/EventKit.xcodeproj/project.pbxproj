@@ -14,8 +14,10 @@
 		4F7C648020809955008EF537 /* FutureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C647F20809955008EF537 /* FutureEvent.swift */; };
 		4F7C648220809AF9008EF537 /* FutureValueEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C648120809AF9008EF537 /* FutureValueEvent.swift */; };
 		4F7C648420809D8B008EF537 /* FutureEmptyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C648320809D8B008EF537 /* FutureEmptyEvent.swift */; };
-		4F7C648D20809EB6008EF537 /* EventKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C648C20809EB6008EF537 /* EventKitTests.swift */; };
+		4F7C648D20809EB6008EF537 /* FutureEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C648C20809EB6008EF537 /* FutureEventTest.swift */; };
 		4F7C648F20809EB6008EF537 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5259B32080956A0010C95F /* EventKit.framework */; };
+		4F7C64972080A565008EF537 /* FutureEmptyEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C64962080A565008EF537 /* FutureEmptyEventTest.swift */; };
+		4F7C64992080A6ED008EF537 /* FutureValueEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C64982080A6ED008EF537 /* FutureValueEventTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,10 @@
 		4F7C648120809AF9008EF537 /* FutureValueEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureValueEvent.swift; sourceTree = "<group>"; };
 		4F7C648320809D8B008EF537 /* FutureEmptyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureEmptyEvent.swift; sourceTree = "<group>"; };
 		4F7C648A20809EB6008EF537 /* EventKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F7C648C20809EB6008EF537 /* EventKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitTests.swift; sourceTree = "<group>"; };
+		4F7C648C20809EB6008EF537 /* FutureEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureEventTest.swift; sourceTree = "<group>"; };
 		4F7C648E20809EB6008EF537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F7C64962080A565008EF537 /* FutureEmptyEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureEmptyEventTest.swift; sourceTree = "<group>"; };
+		4F7C64982080A6ED008EF537 /* FutureValueEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureValueEventTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +135,9 @@
 		4F7C649520809F10008EF537 /* FutureEvent tests */ = {
 			isa = PBXGroup;
 			children = (
-				4F7C648C20809EB6008EF537 /* EventKitTests.swift */,
+				4F7C648C20809EB6008EF537 /* FutureEventTest.swift */,
+				4F7C64962080A565008EF537 /* FutureEmptyEventTest.swift */,
+				4F7C64982080A6ED008EF537 /* FutureValueEventTest.swift */,
 			);
 			path = "FutureEvent tests";
 			sourceTree = "<group>";
@@ -258,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7C648D20809EB6008EF537 /* EventKitTests.swift in Sources */,
+				4F7C64992080A6ED008EF537 /* FutureValueEventTest.swift in Sources */,
+				4F7C648D20809EB6008EF537 /* FutureEventTest.swift in Sources */,
+				4F7C64972080A565008EF537 /* FutureEmptyEventTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

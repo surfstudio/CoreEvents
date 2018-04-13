@@ -31,7 +31,7 @@ class FutureEventTest: XCTestCase {
         super.tearDown()
     }
 
-    // MARK: - Pisitive tests
+    // MARK: - Positive tests
 
     func testTahatEventEmitValue() {
 
