@@ -15,8 +15,10 @@ Pod::Spec.new do |s|
 
   s.author             = { "Alexander Kravchenkov" => "sprintend@gmail.com" }
 
+  s.ios.deployment_target = "9.0"
+
   s.source       = { :git => "https://github.com/LastSprint/EventKit.git", :tag => "#{s.version}" }
 
-  s.source_files  = 'EventKit/Sources/**/*.swift'
+  s.source_files  = 'EventKit/EventKit/Sources/**/*.swift'
 
 end
