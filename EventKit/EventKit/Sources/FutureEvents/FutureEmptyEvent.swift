@@ -7,7 +7,7 @@
 //
 
 /// Future event is like Future time in English.
-/// This event emit **only** new messages.
+/// This event emits **only** new messages.
 /// It's classic behaviour for event.
 public class FutureEmptyEvent: EmptyEvent {
 

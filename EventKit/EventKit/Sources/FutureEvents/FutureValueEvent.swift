@@ -7,7 +7,7 @@
 //
 
 /// Future event is like Future time in English.
-/// This event emit **only** new messages.
+/// This event emits **only** new messages.
 /// It's classic behaviour for event.
 /// Provide `+=` operation for adding new listners: `let evet += { value in ... }`
 /// `Input` - it's a type of value this event will emit.

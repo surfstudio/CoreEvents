@@ -1,38 +1,42 @@
 //
-//  FutureEvent.swift
+//  EmptyPresentEvent.swift
 //  EventKit
 //
 //  Created by Alexander Kravchenkov on 13.04.2018.
 //  Copyright © 2018 Alexander Kravchenkov. All rights reserved.
 //
 
-/// Future event is like Future time in English.
-/// This event emits **only** new messages.
-/// It's classic behaviour for event.
-/// Provide `+=` operation for adding new listners: `let evet += { value in ... }`
-/// `Input` - it's a type of value this event will emit.
-public class FutureEvent<Input>: Event {
+import Foundation
 
-    public typealias Lambda = (Input) -> Void
+/// Present event is like Present time in English.
+/// This event emits **last old emited value and all new messages**.
+/// Provide `+=` operation for adding new listners: `let evet += { value in ... }`
+class EmptyPresentEvent: EmptyEvent {
+
+    public typealias Lambda = () -> Void
 
     private var listners: [Lambda]
+    private var didEmits: Bool
 
     public init() {
         self.listners = []
+        self.didEmits = false
     }
-    
-    /// Add new listner.
+
+    /// Add new listner and emits last emited message only for this listner.
     ///
     /// - Parameter listner: New listner.
     public func addListner(_ listner: @escaping Lambda) {
+        if self.didEmits {
+            listner()
+        }
         self.listners.append(listner)
     }
 
     /// Notify all listners.
-    ///
-    /// - Parameter input: Data for listners.
-    public func invoke(with input: Input) {
-        self.listners.forEach({ $0(input) })
+    public func invoke() {
+        self.didEmits = true
+        self.listners.forEach({ $0() })
     }
 
     /// Remove all listners.
@@ -43,8 +47,8 @@ public class FutureEvent<Input>: Event {
 
 // MARK: - Operations
 
-extension FutureEvent {
-    public static func += (left: FutureEvent<Input>, right: @escaping Lambda) {
+extension EmptyPresentEvent {
+    public static func += (left: EmptyPresentEvent, right: @escaping Lambda) {
         left.addListner(right)
     }
 }
