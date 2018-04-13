@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/LastSprint/EventKit.git", :tag => "#{s.version}" }
 
-  s.source_files  = "Sources", "Sources/**/*.swift"
+  s.source_files  = 'EventKit/Sources/**/*.swift'
 
 end
