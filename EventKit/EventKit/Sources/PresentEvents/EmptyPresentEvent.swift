@@ -7,8 +7,10 @@
 //
 
 /// Present event is like Present time in English.
+///
 /// This event emits **last old emited value and all new messages**.
-/// Provide `+=` operation for adding new listners: `let evet += { value in ... }`
+///
+/// Provides `+=` operation for adding new listners: `event += { value in ... }`
 class EmptyPresentEvent: EmptyEvent {
 
     public typealias Lambda = () -> Void

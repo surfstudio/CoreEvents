@@ -33,7 +33,7 @@ class FutureEventTest: XCTestCase {
 
     // MARK: - Positive tests
 
-    func testTahatEventEmitValue() {
+    func testThatEventEmitsValue() {
 
         // Arrange
 

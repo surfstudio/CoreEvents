@@ -33,7 +33,7 @@ class PresentEventTest: XCTestCase {
 
     // MARK: - Positive tests
 
-    func testTahatEventEmitValue() {
+    func testThatEventEmitsValue() {
 
         // Arrange
 
@@ -135,6 +135,39 @@ class PresentEventTest: XCTestCase {
         XCTAssertEqual(newEmited.count, allEmited.count)
 
         XCTAssertEqual(newEmited.first, allEmited.first)
+        XCTAssertEqual(newEmited.last, allEmited.last)
+    }
+
+    func testThatEventEmitsOnlyLastEmitedMessage() {
+        // Arrange
+
+        let emiter = EventContainer()
+        let firstMessage = "Hello world"
+        let secondMessage = "Hello (:"
+        let thirdMessage = "How are you?"
+
+        // Act
+
+        var allEmited = [String]()
+
+        emiter.event += { value in
+            allEmited.append(value)
+        }
+
+        emiter.emit(value: firstMessage)
+        emiter.emit(value: secondMessage)
+
+        var newEmited = [String]()
+
+        emiter.event += { value in
+            newEmited.append(value)
+        }
+
+        emiter.emit(value: thirdMessage)
+
+        // Assert
+
+        XCTAssertEqual(newEmited.first, allEmited[1])
         XCTAssertEqual(newEmited.last, allEmited.last)
     }
 

@@ -6,9 +6,11 @@
 //  Copyright © 2018 Alexander Kravchenkov. All rights reserved.
 //
 
-/// This event requires that each listener will return any value after handling.
+/// This event requires each listener return any value after handling.
+///
 /// This event may contains only one listner.
-/// It may be cool fro using instead of classic delegating approach
+///
+/// It may be cool for using instead of classic delegating approach.
 public protocol ValueEvent {
 
     associatedtype Input

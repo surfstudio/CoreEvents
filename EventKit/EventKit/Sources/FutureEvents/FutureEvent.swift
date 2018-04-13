@@ -7,9 +7,12 @@
 //
 
 /// Future event is like Future time in English.
+///
 /// This event emits **only** new messages.
 /// It's classic behaviour for event.
-/// Provide `+=` operation for adding new listners: `let evet += { value in ... }`
+///
+/// Provides `+=` operation for adding new listners: `event += { value in ... }`
+///
 /// `Input` - it's a type of value this event will emit.
 public class FutureEvent<Input>: Event {
 
