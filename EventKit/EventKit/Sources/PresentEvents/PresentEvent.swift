@@ -15,7 +15,7 @@ public class PresentEvent<Input>: Event {
     public typealias Lambda = (Input) -> Void
 
     private var listners: [Lambda]
-    private var lastRecivedMessage: Input?
+    private var lastEmitedMessage: Input?
 
     public init() {
         self.listners = []
@@ -25,7 +25,7 @@ public class PresentEvent<Input>: Event {
     ///
     /// - Parameter listner: New listner.
     public func addListner(_ listner: @escaping Lambda) {
-        if let guardedLastRecived = self.lastRecivedMessage {
+        if let guardedLastRecived = self.lastEmitedMessage {
             listner(guardedLastRecived)
         }
         self.listners.append(listner)
@@ -35,12 +35,13 @@ public class PresentEvent<Input>: Event {
     ///
     /// - Parameter input: Data for listners.
     public func invoke(with input: Input) {
-        self.lastRecivedMessage = input
+        self.lastEmitedMessage = input
         self.listners.forEach({ $0(input) })
     }
 
-    /// Remove all listners.
+    /// Remove all listners and erase last emited value
     public func clear() {
+        self.lastEmitedMessage = nil
         self.listners.removeAll()
     }
 }

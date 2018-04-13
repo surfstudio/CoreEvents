@@ -6,8 +6,6 @@
 //  Copyright © 2018 Alexander Kravchenkov. All rights reserved.
 //
 
-import Foundation
-
 /// Present event is like Present time in English.
 /// This event emits **last old emited value and all new messages**.
 /// Provide `+=` operation for adding new listners: `let evet += { value in ... }`
@@ -39,8 +37,9 @@ class EmptyPresentEvent: EmptyEvent {
         self.listners.forEach({ $0() })
     }
 
-    /// Remove all listners.
+    /// Remove all listners and erase last emited value
     public func clear() {
+        self.didEmits = false
         self.listners.removeAll()
     }
 }
