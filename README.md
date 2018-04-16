@@ -106,4 +106,4 @@ Will print:
 
 ## How to install
 
-`pod 'Events', :git =>  "https://github.com/LastSprint/EventKit.git"`
+`pod 'Events', '~> 1.0.0'`
