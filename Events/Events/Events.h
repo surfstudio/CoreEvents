@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 //! Project version number for EventKit.
-FOUNDATION_EXPORT double EventKitVersionNumber;
+FOUNDATION_EXPORT double EventsVersionNumber;
 
 //! Project version string for EventKit.
-FOUNDATION_EXPORT const unsigned char EventKitVersionString[];
+FOUNDATION_EXPORT const unsigned char EventsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <EventKit/PublicHeader.h>
 
