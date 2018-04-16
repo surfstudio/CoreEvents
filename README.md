@@ -1,12 +1,12 @@
 # EventKit
-Small swift events kit that provides some base types of events:
+Small Swift events kit that provides some base types of events:
 - `FutureEvent`
 - `PresentEvent`
 - `PastEvent`
 
 Each this type may implement some Event protocols:
-- `Event` it's a object that contains any listners (swift clisures) with one templte parameter - emited value type.
-- `EmptyEvent` it's syntactic shugar for `Event` with Void template parameter.
+- `Event` it's a object that contains any listners (swift closures) with one template parameter - emited value type.
+- `EmptyEvent` it's syntactic sugar for `Event` with Void template parameter.
 - `ValueEvent` it's event, that can contain **only** one listner and this listner should get and **return** value. This protocol contains contains two template parameters.
 
 ## FutureEvent
@@ -40,7 +40,7 @@ will print `Awesome int: 42`
 
 ### Description
 
-This events provide all `Future` logic, but additionally provide emits last emited value for new listner.
+This event provide all `Future` logic, but additionally provide emits last emited value for new listner.
 It means if your event already emits value and you add new listener then yout listener handles previous emited value in the same time.
 
 ### Types

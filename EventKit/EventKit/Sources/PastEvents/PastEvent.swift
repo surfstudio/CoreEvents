@@ -7,8 +7,11 @@
 //
 
 /// Present event is like Past time in English.
+///
 /// This event emits **all old emited value and all new messages**.
-/// Provide `+=` operation for adding new listners: `let evet += { value in ... }`
+///
+/// Provides `+=` operation for adding new listners: `event += { value in ... }`
+///
 /// `Input` - it's a type of value this event will emit.
 class PastEvent<Input>: Event {
 

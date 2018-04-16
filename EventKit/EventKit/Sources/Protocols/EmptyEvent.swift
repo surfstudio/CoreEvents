@@ -6,7 +6,7 @@
 //  Copyright © 2018 Alexander Kravchenkov. All rights reserved.
 //
 
-/// Like classick event, but provide syntactic sugar for emit Void
+/// Like classic event, but provide syntactic sugar for emit Void.
 public protocol EmptyEvent {
 
     typealias Lambda = () -> Void
