@@ -2,11 +2,11 @@ Pod::Spec.new do |s|
 
   s.name         = "Events"
   s.version      = "1.0.0"
-  s.summary      = "Small library that contains rx-like events."
+  s.summary      = "Small library contains rx-like events."
 
   s.description  = <<-DESC
-  This kit contains object that represents Events (like C# event). 
-  This may simplify things like: pub/sub, delegation and other.
+  This library contains object represents Events (like C# event). 
+  This may simplify things like: pub/sub, delegation, notification and other.
                    DESC
 
   s.homepage     = "https://github.com/LastSprint/Events"
