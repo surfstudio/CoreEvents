@@ -1,4 +1,4 @@
-# EventKit
+# EventsKit
 Small Swift events kit that provides some base types of events:
 - `FutureEvent`
 - `PresentEvent`
@@ -106,4 +106,4 @@ Will print:
 
 ## How to install
 
-`pod 'Events', '~> 1.0.0'`
+`pod 'EventsKit', '~> 1.0.0'`
