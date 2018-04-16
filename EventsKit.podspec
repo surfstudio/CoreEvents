@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "Events"
+  s.name         = "EventsKit"
   s.version      = "1.0.0"
   s.summary      = "Small library contains rx-like events."
 
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   This may simplify things like: pub/sub, delegation, notification and other.
                    DESC
 
-  s.homepage     = "https://github.com/LastSprint/Events"
+  s.homepage     = "https://github.com/LastSprint/EventsKit"
 
   s.license      = { :type => "MIT" }
 
@@ -17,8 +17,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "9.0"
 
-  s.source       = { :git => "https://github.com/LastSprint/Events.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/LastSprint/EventsKit.git", :tag => "#{s.version}" }
 
-  s.source_files  = 'Events/Events/Sources/**/*.swift'
+  s.source_files  = 'EventsKit/EventsKit/Sources/**/*.swift'
 
 end
