@@ -7,284 +7,283 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F5259B82080956A0010C95F /* EventsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F5259B62080956A0010C95F /* EventsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F5259C5208096200010C95F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5259C4208096200010C95F /* Event.swift */; };
-		4F7C647B20809720008EF537 /* EmptyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C647A20809720008EF537 /* EmptyEvent.swift */; };
-		4F7C647D2080979F008EF537 /* ValueEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C647C2080979F008EF537 /* ValueEvent.swift */; };
-		4F7C648020809955008EF537 /* FutureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C647F20809955008EF537 /* FutureEvent.swift */; };
-		4F7C648220809AF9008EF537 /* FutureValueEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C648120809AF9008EF537 /* FutureValueEvent.swift */; };
-		4F7C648420809D8B008EF537 /* FutureEmptyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C648320809D8B008EF537 /* FutureEmptyEvent.swift */; };
-		4F7C648D20809EB6008EF537 /* FutureEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C648C20809EB6008EF537 /* FutureEventTest.swift */; };
-		4F7C648F20809EB6008EF537 /* EventsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5259B32080956A0010C95F /* EventsKit.framework */; };
-		4F7C64972080A565008EF537 /* FutureEmptyEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C64962080A565008EF537 /* FutureEmptyEventTest.swift */; };
-		4F7C64992080A6ED008EF537 /* FutureValueEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C64982080A6ED008EF537 /* FutureValueEventTest.swift */; };
-		4F7C649C2080A823008EF537 /* PresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C649B2080A823008EF537 /* PresentEvent.swift */; };
-		4F7C649E2080A9EB008EF537 /* EmptyPresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C649D2080A9EB008EF537 /* EmptyPresentEvent.swift */; };
-		4F7C64A12080AC5F008EF537 /* PresentEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C64A02080AC5F008EF537 /* PresentEventTest.swift */; };
-		4F7C64A42080AE5C008EF537 /* PastEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C64A32080AE5C008EF537 /* PastEvent.swift */; };
-		4F7C64A92080AF94008EF537 /* PastEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C64A82080AF94008EF537 /* PastEventTests.swift */; };
+		4F2009E42085BC6100698B7C /* EventsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2009DA2085BC6100698B7C /* EventsKit.framework */; };
+		4F2009EB2085BC6100698B7C /* EventsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F2009DD2085BC6100698B7C /* EventsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F200A022085BC8700698B7C /* PresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2009F62085BC8700698B7C /* PresentEvent.swift */; };
+		4F200A032085BC8700698B7C /* EmptyPresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2009F72085BC8700698B7C /* EmptyPresentEvent.swift */; };
+		4F200A042085BC8700698B7C /* FutureValueEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2009F92085BC8700698B7C /* FutureValueEvent.swift */; };
+		4F200A052085BC8700698B7C /* FutureEmptyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2009FA2085BC8700698B7C /* FutureEmptyEvent.swift */; };
+		4F200A062085BC8700698B7C /* FutureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2009FB2085BC8700698B7C /* FutureEvent.swift */; };
+		4F200A072085BC8700698B7C /* PastEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2009FD2085BC8700698B7C /* PastEvent.swift */; };
+		4F200A082085BC8700698B7C /* EmptyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2009FF2085BC8700698B7C /* EmptyEvent.swift */; };
+		4F200A092085BC8700698B7C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F200A002085BC8700698B7C /* Event.swift */; };
+		4F200A0A2085BC8700698B7C /* ValueEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F200A012085BC8700698B7C /* ValueEvent.swift */; };
+		4F200A132085BCF000698B7C /* PresentEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F200A0C2085BCF000698B7C /* PresentEventTest.swift */; };
+		4F200A142085BCF000698B7C /* PastEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F200A0E2085BCF000698B7C /* PastEventTests.swift */; };
+		4F200A152085BCF000698B7C /* FutureEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F200A102085BCF000698B7C /* FutureEventTest.swift */; };
+		4F200A162085BCF000698B7C /* FutureEmptyEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F200A112085BCF000698B7C /* FutureEmptyEventTest.swift */; };
+		4F200A172085BCF000698B7C /* FutureValueEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F200A122085BCF000698B7C /* FutureValueEventTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4F7C649020809EB6008EF537 /* PBXContainerItemProxy */ = {
+		4F2009E52085BC6100698B7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4F5259AA2080956A0010C95F /* Project object */;
+			containerPortal = 4F2009D12085BC6100698B7C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4F5259B22080956A0010C95F;
-			remoteInfo = EventKit;
+			remoteGlobalIDString = 4F2009D92085BC6100698B7C;
+			remoteInfo = EventsKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F5259B32080956A0010C95F /* EventsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EventsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F5259B62080956A0010C95F /* EventsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsKit.h; sourceTree = "<group>"; };
-		4F5259B72080956A0010C95F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F5259C4208096200010C95F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		4F7C647A20809720008EF537 /* EmptyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyEvent.swift; sourceTree = "<group>"; };
-		4F7C647C2080979F008EF537 /* ValueEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueEvent.swift; sourceTree = "<group>"; };
-		4F7C647F20809955008EF537 /* FutureEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureEvent.swift; sourceTree = "<group>"; };
-		4F7C648120809AF9008EF537 /* FutureValueEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureValueEvent.swift; sourceTree = "<group>"; };
-		4F7C648320809D8B008EF537 /* FutureEmptyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureEmptyEvent.swift; sourceTree = "<group>"; };
-		4F7C648A20809EB6008EF537 /* EventsKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F7C648C20809EB6008EF537 /* FutureEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureEventTest.swift; sourceTree = "<group>"; };
-		4F7C648E20809EB6008EF537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F7C64962080A565008EF537 /* FutureEmptyEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureEmptyEventTest.swift; sourceTree = "<group>"; };
-		4F7C64982080A6ED008EF537 /* FutureValueEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureValueEventTest.swift; sourceTree = "<group>"; };
-		4F7C649B2080A823008EF537 /* PresentEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentEvent.swift; sourceTree = "<group>"; };
-		4F7C649D2080A9EB008EF537 /* EmptyPresentEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPresentEvent.swift; sourceTree = "<group>"; };
-		4F7C64A02080AC5F008EF537 /* PresentEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentEventTest.swift; sourceTree = "<group>"; };
-		4F7C64A32080AE5C008EF537 /* PastEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEvent.swift; sourceTree = "<group>"; };
-		4F7C64A82080AF94008EF537 /* PastEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEventTests.swift; sourceTree = "<group>"; };
+		4F2009DA2085BC6100698B7C /* EventsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EventsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F2009DD2085BC6100698B7C /* EventsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsKit.h; sourceTree = "<group>"; };
+		4F2009DE2085BC6100698B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F2009E32085BC6100698B7C /* EventsKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F2009EA2085BC6100698B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F2009F62085BC8700698B7C /* PresentEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentEvent.swift; sourceTree = "<group>"; };
+		4F2009F72085BC8700698B7C /* EmptyPresentEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyPresentEvent.swift; sourceTree = "<group>"; };
+		4F2009F92085BC8700698B7C /* FutureValueEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureValueEvent.swift; sourceTree = "<group>"; };
+		4F2009FA2085BC8700698B7C /* FutureEmptyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureEmptyEvent.swift; sourceTree = "<group>"; };
+		4F2009FB2085BC8700698B7C /* FutureEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureEvent.swift; sourceTree = "<group>"; };
+		4F2009FD2085BC8700698B7C /* PastEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastEvent.swift; sourceTree = "<group>"; };
+		4F2009FF2085BC8700698B7C /* EmptyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyEvent.swift; sourceTree = "<group>"; };
+		4F200A002085BC8700698B7C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4F200A012085BC8700698B7C /* ValueEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueEvent.swift; sourceTree = "<group>"; };
+		4F200A0C2085BCF000698B7C /* PresentEventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentEventTest.swift; sourceTree = "<group>"; };
+		4F200A0E2085BCF000698B7C /* PastEventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastEventTests.swift; sourceTree = "<group>"; };
+		4F200A102085BCF000698B7C /* FutureEventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureEventTest.swift; sourceTree = "<group>"; };
+		4F200A112085BCF000698B7C /* FutureEmptyEventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureEmptyEventTest.swift; sourceTree = "<group>"; };
+		4F200A122085BCF000698B7C /* FutureValueEventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureValueEventTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F5259AF2080956A0010C95F /* Frameworks */ = {
+		4F2009D62085BC6100698B7C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F7C648720809EB6008EF537 /* Frameworks */ = {
+		4F2009E02085BC6100698B7C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7C648F20809EB6008EF537 /* EventsKit.framework in Frameworks */,
+				4F2009E42085BC6100698B7C /* EventsKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F5259A92080956A0010C95F = {
+		4F2009D02085BC6100698B7C = {
 			isa = PBXGroup;
 			children = (
-				4F5259B52080956A0010C95F /* EventsKit */,
-				4F7C648B20809EB6008EF537 /* EventsKitTests */,
-				4F5259B42080956A0010C95F /* Products */,
+				4F2009DC2085BC6100698B7C /* EventsKit */,
+				4F2009E72085BC6100698B7C /* EventsKitTests */,
+				4F2009DB2085BC6100698B7C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4F5259B42080956A0010C95F /* Products */ = {
+		4F2009DB2085BC6100698B7C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F5259B32080956A0010C95F /* EventsKit.framework */,
-				4F7C648A20809EB6008EF537 /* EventsKitTests.xctest */,
+				4F2009DA2085BC6100698B7C /* EventsKit.framework */,
+				4F2009E32085BC6100698B7C /* EventsKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F5259B52080956A0010C95F /* EventsKit */ = {
+		4F2009DC2085BC6100698B7C /* EventsKit */ = {
 			isa = PBXGroup;
 			children = (
-				4F5259BE208095760010C95F /* Sources */,
-				4F5259B62080956A0010C95F /* EventsKit.h */,
-				4F5259B72080956A0010C95F /* Info.plist */,
+				4F2009F42085BC8700698B7C /* Sources */,
+				4F2009DD2085BC6100698B7C /* EventsKit.h */,
+				4F2009DE2085BC6100698B7C /* Info.plist */,
 			);
 			path = EventsKit;
 			sourceTree = "<group>";
 		};
-		4F5259BE208095760010C95F /* Sources */ = {
+		4F2009E72085BC6100698B7C /* EventsKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				4F7C64A22080AE48008EF537 /* PastEvents */,
-				4F7C649A2080A810008EF537 /* PresentEvents */,
-				4F7C647E20809931008EF537 /* FutureEvents */,
-				4F5259C32080960B0010C95F /* Protocols */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		4F5259C32080960B0010C95F /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				4F5259C4208096200010C95F /* Event.swift */,
-				4F7C647A20809720008EF537 /* EmptyEvent.swift */,
-				4F7C647C2080979F008EF537 /* ValueEvent.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		4F7C647E20809931008EF537 /* FutureEvents */ = {
-			isa = PBXGroup;
-			children = (
-				4F7C647F20809955008EF537 /* FutureEvent.swift */,
-				4F7C648120809AF9008EF537 /* FutureValueEvent.swift */,
-				4F7C648320809D8B008EF537 /* FutureEmptyEvent.swift */,
-			);
-			path = FutureEvents;
-			sourceTree = "<group>";
-		};
-		4F7C648B20809EB6008EF537 /* EventsKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				4F7C64A72080AF7D008EF537 /* PastEventTests */,
-				4F7C649F2080AC44008EF537 /* PresentEventTests */,
-				4F7C649520809F10008EF537 /* FutureEventTests */,
-				4F7C648E20809EB6008EF537 /* Info.plist */,
+				4F200A0F2085BCF000698B7C /* FutureEventTests */,
+				4F200A0D2085BCF000698B7C /* PastEventTests */,
+				4F200A0B2085BCF000698B7C /* PresentEventTests */,
+				4F2009EA2085BC6100698B7C /* Info.plist */,
 			);
 			path = EventsKitTests;
 			sourceTree = "<group>";
 		};
-		4F7C649520809F10008EF537 /* FutureEventTests */ = {
+		4F2009F42085BC8700698B7C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4F7C648C20809EB6008EF537 /* FutureEventTest.swift */,
-				4F7C64962080A565008EF537 /* FutureEmptyEventTest.swift */,
-				4F7C64982080A6ED008EF537 /* FutureValueEventTest.swift */,
+				4F2009F52085BC8700698B7C /* PresentEvents */,
+				4F2009F82085BC8700698B7C /* FutureEvents */,
+				4F2009FC2085BC8700698B7C /* PastEvents */,
+				4F2009FE2085BC8700698B7C /* Protocols */,
 			);
-			path = FutureEventTests;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		4F7C649A2080A810008EF537 /* PresentEvents */ = {
+		4F2009F52085BC8700698B7C /* PresentEvents */ = {
 			isa = PBXGroup;
 			children = (
-				4F7C649B2080A823008EF537 /* PresentEvent.swift */,
-				4F7C649D2080A9EB008EF537 /* EmptyPresentEvent.swift */,
+				4F2009F62085BC8700698B7C /* PresentEvent.swift */,
+				4F2009F72085BC8700698B7C /* EmptyPresentEvent.swift */,
 			);
 			path = PresentEvents;
 			sourceTree = "<group>";
 		};
-		4F7C649F2080AC44008EF537 /* PresentEventTests */ = {
+		4F2009F82085BC8700698B7C /* FutureEvents */ = {
 			isa = PBXGroup;
 			children = (
-				4F7C64A02080AC5F008EF537 /* PresentEventTest.swift */,
+				4F2009F92085BC8700698B7C /* FutureValueEvent.swift */,
+				4F2009FA2085BC8700698B7C /* FutureEmptyEvent.swift */,
+				4F2009FB2085BC8700698B7C /* FutureEvent.swift */,
 			);
-			path = PresentEventTests;
+			path = FutureEvents;
 			sourceTree = "<group>";
 		};
-		4F7C64A22080AE48008EF537 /* PastEvents */ = {
+		4F2009FC2085BC8700698B7C /* PastEvents */ = {
 			isa = PBXGroup;
 			children = (
-				4F7C64A32080AE5C008EF537 /* PastEvent.swift */,
+				4F2009FD2085BC8700698B7C /* PastEvent.swift */,
 			);
 			path = PastEvents;
 			sourceTree = "<group>";
 		};
-		4F7C64A72080AF7D008EF537 /* PastEventTests */ = {
+		4F2009FE2085BC8700698B7C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				4F7C64A82080AF94008EF537 /* PastEventTests.swift */,
+				4F2009FF2085BC8700698B7C /* EmptyEvent.swift */,
+				4F200A002085BC8700698B7C /* Event.swift */,
+				4F200A012085BC8700698B7C /* ValueEvent.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4F200A0B2085BCF000698B7C /* PresentEventTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F200A0C2085BCF000698B7C /* PresentEventTest.swift */,
+			);
+			path = PresentEventTests;
+			sourceTree = "<group>";
+		};
+		4F200A0D2085BCF000698B7C /* PastEventTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F200A0E2085BCF000698B7C /* PastEventTests.swift */,
 			);
 			path = PastEventTests;
+			sourceTree = "<group>";
+		};
+		4F200A0F2085BCF000698B7C /* FutureEventTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F200A102085BCF000698B7C /* FutureEventTest.swift */,
+				4F200A112085BCF000698B7C /* FutureEmptyEventTest.swift */,
+				4F200A122085BCF000698B7C /* FutureValueEventTest.swift */,
+			);
+			path = FutureEventTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4F5259B02080956A0010C95F /* Headers */ = {
+		4F2009D72085BC6100698B7C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F5259B82080956A0010C95F /* EventsKit.h in Headers */,
+				4F2009EB2085BC6100698B7C /* EventsKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4F5259B22080956A0010C95F /* EventsKit */ = {
+		4F2009D92085BC6100698B7C /* EventsKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F5259BB2080956A0010C95F /* Build configuration list for PBXNativeTarget "EventsKit" */;
+			buildConfigurationList = 4F2009EE2085BC6100698B7C /* Build configuration list for PBXNativeTarget "EventsKit" */;
 			buildPhases = (
-				4F5259AE2080956A0010C95F /* Sources */,
-				4F5259AF2080956A0010C95F /* Frameworks */,
-				4F5259B02080956A0010C95F /* Headers */,
-				4F5259B12080956A0010C95F /* Resources */,
+				4F2009D52085BC6100698B7C /* Sources */,
+				4F2009D62085BC6100698B7C /* Frameworks */,
+				4F2009D72085BC6100698B7C /* Headers */,
+				4F2009D82085BC6100698B7C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = EventsKit;
-			productName = EventKit;
-			productReference = 4F5259B32080956A0010C95F /* EventsKit.framework */;
+			productName = EventsKit;
+			productReference = 4F2009DA2085BC6100698B7C /* EventsKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4F7C648920809EB6008EF537 /* EventsKitTests */ = {
+		4F2009E22085BC6100698B7C /* EventsKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F7C649220809EB6008EF537 /* Build configuration list for PBXNativeTarget "EventsKitTests" */;
+			buildConfigurationList = 4F2009F12085BC6100698B7C /* Build configuration list for PBXNativeTarget "EventsKitTests" */;
 			buildPhases = (
-				4F7C648620809EB6008EF537 /* Sources */,
-				4F7C648720809EB6008EF537 /* Frameworks */,
-				4F7C648820809EB6008EF537 /* Resources */,
+				4F2009DF2085BC6100698B7C /* Sources */,
+				4F2009E02085BC6100698B7C /* Frameworks */,
+				4F2009E12085BC6100698B7C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4F7C649120809EB6008EF537 /* PBXTargetDependency */,
+				4F2009E62085BC6100698B7C /* PBXTargetDependency */,
 			);
 			name = EventsKitTests;
-			productName = EventKitTests;
-			productReference = 4F7C648A20809EB6008EF537 /* EventsKitTests.xctest */;
+			productName = EventsKitTests;
+			productReference = 4F2009E32085BC6100698B7C /* EventsKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4F5259AA2080956A0010C95F /* Project object */ = {
+		4F2009D12085BC6100698B7C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Alexander Kravchenkov";
 				TargetAttributes = {
-					4F5259B22080956A0010C95F = {
+					4F2009D92085BC6100698B7C = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 0930;
 					};
-					4F7C648920809EB6008EF537 = {
+					4F2009E22085BC6100698B7C = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
 			};
-			buildConfigurationList = 4F5259AD2080956A0010C95F /* Build configuration list for PBXProject "EventsKit" */;
+			buildConfigurationList = 4F2009D42085BC6100698B7C /* Build configuration list for PBXProject "EventsKit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 4F5259A92080956A0010C95F;
-			productRefGroup = 4F5259B42080956A0010C95F /* Products */;
+			mainGroup = 4F2009D02085BC6100698B7C;
+			productRefGroup = 4F2009DB2085BC6100698B7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F5259B22080956A0010C95F /* EventsKit */,
-				4F7C648920809EB6008EF537 /* EventsKitTests */,
+				4F2009D92085BC6100698B7C /* EventsKit */,
+				4F2009E22085BC6100698B7C /* EventsKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4F5259B12080956A0010C95F /* Resources */ = {
+		4F2009D82085BC6100698B7C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F7C648820809EB6008EF537 /* Resources */ = {
+		4F2009E12085BC6100698B7C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -294,46 +293,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F5259AE2080956A0010C95F /* Sources */ = {
+		4F2009D52085BC6100698B7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7C648420809D8B008EF537 /* FutureEmptyEvent.swift in Sources */,
-				4F7C64A42080AE5C008EF537 /* PastEvent.swift in Sources */,
-				4F7C649C2080A823008EF537 /* PresentEvent.swift in Sources */,
-				4F5259C5208096200010C95F /* Event.swift in Sources */,
-				4F7C648220809AF9008EF537 /* FutureValueEvent.swift in Sources */,
-				4F7C649E2080A9EB008EF537 /* EmptyPresentEvent.swift in Sources */,
-				4F7C647B20809720008EF537 /* EmptyEvent.swift in Sources */,
-				4F7C647D2080979F008EF537 /* ValueEvent.swift in Sources */,
-				4F7C648020809955008EF537 /* FutureEvent.swift in Sources */,
+				4F200A092085BC8700698B7C /* Event.swift in Sources */,
+				4F200A032085BC8700698B7C /* EmptyPresentEvent.swift in Sources */,
+				4F200A052085BC8700698B7C /* FutureEmptyEvent.swift in Sources */,
+				4F200A042085BC8700698B7C /* FutureValueEvent.swift in Sources */,
+				4F200A0A2085BC8700698B7C /* ValueEvent.swift in Sources */,
+				4F200A022085BC8700698B7C /* PresentEvent.swift in Sources */,
+				4F200A082085BC8700698B7C /* EmptyEvent.swift in Sources */,
+				4F200A072085BC8700698B7C /* PastEvent.swift in Sources */,
+				4F200A062085BC8700698B7C /* FutureEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F7C648620809EB6008EF537 /* Sources */ = {
+		4F2009DF2085BC6100698B7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7C64A12080AC5F008EF537 /* PresentEventTest.swift in Sources */,
-				4F7C64992080A6ED008EF537 /* FutureValueEventTest.swift in Sources */,
-				4F7C64A92080AF94008EF537 /* PastEventTests.swift in Sources */,
-				4F7C648D20809EB6008EF537 /* FutureEventTest.swift in Sources */,
-				4F7C64972080A565008EF537 /* FutureEmptyEventTest.swift in Sources */,
+				4F200A142085BCF000698B7C /* PastEventTests.swift in Sources */,
+				4F200A162085BCF000698B7C /* FutureEmptyEventTest.swift in Sources */,
+				4F200A132085BCF000698B7C /* PresentEventTest.swift in Sources */,
+				4F200A172085BCF000698B7C /* FutureValueEventTest.swift in Sources */,
+				4F200A152085BCF000698B7C /* FutureEventTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4F7C649120809EB6008EF537 /* PBXTargetDependency */ = {
+		4F2009E62085BC6100698B7C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4F5259B22080956A0010C95F /* EventsKit */;
-			targetProxy = 4F7C649020809EB6008EF537 /* PBXContainerItemProxy */;
+			target = 4F2009D92085BC6100698B7C /* EventsKit */;
+			targetProxy = 4F2009E52085BC6100698B7C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4F5259B92080956A0010C95F /* Debug */ = {
+		4F2009EC2085BC6100698B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -396,7 +395,7 @@
 			};
 			name = Debug;
 		};
-		4F5259BA2080956A0010C95F /* Release */ = {
+		4F2009ED2085BC6100698B7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -453,10 +452,9 @@
 			};
 			name = Release;
 		};
-		4F5259BC2080956A0010C95F /* Debug */ = {
+		4F2009EF2085BC6100698B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -464,26 +462,24 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/EventsKit/Info.plist";
+				INFOPLIST_FILE = EventsKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AK.Events;
+				PRODUCT_BUNDLE_IDENTIFIER = AK.EventsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4F5259BD2080956A0010C95F /* Release */ = {
+		4F2009F02085BC6100698B7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -491,14 +487,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/EventsKit/Info.plist";
+				INFOPLIST_FILE = EventsKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AK.Events;
+				PRODUCT_BUNDLE_IDENTIFIER = AK.EventsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -506,36 +502,38 @@
 			};
 			name = Release;
 		};
-		4F7C649320809EB6008EF537 /* Debug */ = {
+		4F2009F22085BC6100698B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZJ45BEVK69;
-				INFOPLIST_FILE = EventKitTests/Info.plist;
+				INFOPLIST_FILE = EventsKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AK.EventKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = AK.EventsKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4F7C649420809EB6008EF537 /* Release */ = {
+		4F2009F32085BC6100698B7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZJ45BEVK69;
-				INFOPLIST_FILE = EventKitTests/Info.plist;
+				INFOPLIST_FILE = EventsKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AK.EventKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = AK.EventsKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -545,34 +543,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F5259AD2080956A0010C95F /* Build configuration list for PBXProject "EventsKit" */ = {
+		4F2009D42085BC6100698B7C /* Build configuration list for PBXProject "EventsKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F5259B92080956A0010C95F /* Debug */,
-				4F5259BA2080956A0010C95F /* Release */,
+				4F2009EC2085BC6100698B7C /* Debug */,
+				4F2009ED2085BC6100698B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F5259BB2080956A0010C95F /* Build configuration list for PBXNativeTarget "EventsKit" */ = {
+		4F2009EE2085BC6100698B7C /* Build configuration list for PBXNativeTarget "EventsKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F5259BC2080956A0010C95F /* Debug */,
-				4F5259BD2080956A0010C95F /* Release */,
+				4F2009EF2085BC6100698B7C /* Debug */,
+				4F2009F02085BC6100698B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F7C649220809EB6008EF537 /* Build configuration list for PBXNativeTarget "EventsKitTests" */ = {
+		4F2009F12085BC6100698B7C /* Build configuration list for PBXNativeTarget "EventsKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F7C649320809EB6008EF537 /* Debug */,
-				4F7C649420809EB6008EF537 /* Release */,
+				4F2009F22085BC6100698B7C /* Debug */,
+				4F2009F32085BC6100698B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4F5259AA2080956A0010C95F /* Project object */;
+	rootObject = 4F2009D12085BC6100698B7C /* Project object */;
 }

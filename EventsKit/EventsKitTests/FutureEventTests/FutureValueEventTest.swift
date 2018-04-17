@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import EventKit
+@testable import EventsKit
 
 class FutureValueEventTest: XCTestCase {
 
