@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CoreEvents"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "Small library contains rx-like events."
 
   s.description  = <<-DESC
