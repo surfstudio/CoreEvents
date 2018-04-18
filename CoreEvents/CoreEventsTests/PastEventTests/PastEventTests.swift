@@ -1,13 +1,13 @@
 //
 //  PastEventTests.swift
-//  EventKitTests
+//  CoreEventsTests
 //
 //  Created by Alexander Kravchenkov on 13.04.2018.
 //  Copyright © 2018 Alexander Kravchenkov. All rights reserved.
 //
 
 import XCTest
-@testable import EventsKit
+@testable import CoreEvents
 
 class PastEventTests: XCTestCase {
 

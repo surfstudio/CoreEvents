@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:EventsKit.xcodeproj">
+      location = "self:CoreEvents.xcodeproj">
    </FileRef>
 </Workspace>

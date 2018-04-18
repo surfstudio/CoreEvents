@@ -1,16 +1,15 @@
 //
-//  Event.swift
-//  EventsKit
+//  EmptyEvent.swift
+//  CoreEvents
 //
 //  Created by Alexander Kravchenkov on 13.04.2018.
 //  Copyright © 2018 Alexander Kravchenkov. All rights reserved.
 //
 
-/// Classic typesafe event.
-public protocol Event {
+/// Like classic event, but provide syntactic sugar for emit Void.
+public protocol EmptyEvent {
 
-    associatedtype Input
-    typealias Lambda = (Input) -> Void
+    typealias Lambda = () -> Void
 
     /// Add new listner.
     ///
@@ -18,9 +17,7 @@ public protocol Event {
     func addListner(_ listner: @escaping Lambda)
 
     /// Notify all listners.
-    ///
-    /// - Parameter input: Data for listners.
-    func invoke(with input: Input)
+    func invoke()
 
     /// Remove all listners.
     func clear()
