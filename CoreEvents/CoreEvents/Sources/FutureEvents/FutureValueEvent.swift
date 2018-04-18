@@ -16,8 +16,17 @@
 /// `Input` - it's a type of value this event will emit.
 ///
 /// `Return` - it's a type of value which listner should return after handling.
-class FutureValueEvent<Input, Return>: ValueEvent {
-    public typealias Lambda = (Input) -> (Return)
+open class FutureValueEvent<Input, Output>: ValueEvent<Input, Output> {
+    public typealias Lambda = (Input) -> (Output)
 
-    public var valueListner: Lambda?
+    private var valueListnerData: Lambda?
+
+    open override var valueListner: Lambda? {
+        get {
+            return self.valueListnerData
+        }
+        set {
+            self.valueListnerData = newValue
+        }
+    }
 }

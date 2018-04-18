@@ -7,7 +7,7 @@
 //
 
 /// Classic typesafe event.
-public protocol Event {
+public protocol EventProtocol {
 
     associatedtype Input
     typealias Lambda = (Input) -> Void
@@ -24,4 +24,22 @@ public protocol Event {
 
     /// Remove all listners.
     func clear()
+}
+
+/// Just type erasure for `EventProtocol`
+open class Event<Input>: EventProtocol {
+
+    public init() { }
+
+    open func addListner(_ listner: @escaping Lambda) {
+        fatalError("\(#function) should be overriden in child class")
+    }
+
+    open func invoke(with input: Input) {
+        fatalError("\(#function) should be overriden in child class")
+    }
+
+    open func clear() {
+        fatalError("\(#function) should be overriden in child class")
+    }
 }

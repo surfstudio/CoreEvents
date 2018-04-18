@@ -10,31 +10,32 @@
 ///
 /// This event emits **only** new messages.
 /// It's classic behaviour for event.
-public class FutureEmptyEvent: EmptyEvent {
+open class FutureEmptyEvent: EmptyEvent {
 
     public typealias Lambda = () -> Void
 
     private var listners: [Lambda]
 
-    public init() {
+    public override init() {
         self.listners = [Lambda]()
+        super.init()
     }
 
-    public func addListner(_ listner: @escaping Lambda) {
+    open override func addListner(_ listner: @escaping Lambda) {
         self.listners.append(listner)
     }
 
-    public func invoke() {
+    open override func invoke() {
         self.listners.forEach({ $0() })
     }
 
-    public func clear() {
+    open override func clear() {
         self.listners.removeAll()
     }
 }
 
 extension FutureEmptyEvent {
-    public static func += (left: FutureEmptyEvent, right: Lambda?) {
+    open static func += (left: FutureEmptyEvent, right: Lambda?) {
         guard let right = right else {
             return
         }

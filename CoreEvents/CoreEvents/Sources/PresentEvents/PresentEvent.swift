@@ -13,21 +13,22 @@
 /// Provides `+=` operation for adding new listners: `event += { value in ... }`
 ///
 /// `Input` - it's a type of value this event will emit.
-public class PresentEvent<Input>: Event {
+open class PresentEvent<Input>: Event<Input> {
 
     public typealias Lambda = (Input) -> Void
 
     private var listners: [Lambda]
     private var lastEmitedMessage: Input?
 
-    public init() {
+    public override init() {
         self.listners = []
+        super.init()
     }
 
     /// Add new listner and emits last emited message only for this listner.
     ///
     /// - Parameter listner: New listner.
-    public func addListner(_ listner: @escaping Lambda) {
+    open override func addListner(_ listner: @escaping Lambda) {
         if let guardedLastRecived = self.lastEmitedMessage {
             listner(guardedLastRecived)
         }
@@ -37,13 +38,13 @@ public class PresentEvent<Input>: Event {
     /// Notify all listners.
     ///
     /// - Parameter input: Data for listners.
-    public func invoke(with input: Input) {
+    open override func invoke(with input: Input) {
         self.lastEmitedMessage = input
         self.listners.forEach({ $0(input) })
     }
 
     /// Remove all listners and erase last emited value
-    public func clear() {
+    open override func clear() {
         self.lastEmitedMessage = nil
         self.listners.removeAll()
     }
@@ -52,7 +53,11 @@ public class PresentEvent<Input>: Event {
 // MARK: - Operations
 
 extension PresentEvent {
-    public static func += (left: PresentEvent<Input>, right: @escaping Lambda) {
-        left.addListner(right)
+    open static func += (left: PresentEvent<Input>, right: Lambda?) {
+        guard let guardedRight = right else {
+            return
+        }
+
+        left.addListner(guardedRight)
     }
 }

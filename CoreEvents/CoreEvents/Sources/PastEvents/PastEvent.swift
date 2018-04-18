@@ -13,22 +13,23 @@
 /// Provides `+=` operation for adding new listners: `event += { value in ... }`
 ///
 /// `Input` - it's a type of value this event will emit.
-class PastEvent<Input>: Event {
+open class PastEvent<Input>: Event<Input> {
 
     public typealias Lambda = (Input) -> Void
 
     private var listners: [Lambda]
     private var laterEmits: [Input]
 
-    public init() {
+    public override init() {
         self.laterEmits = [Input]()
         self.listners = []
+        super.init()
     }
 
     /// Add new listner and emits last emited message only for this listner.
     ///
     /// - Parameter listner: New listner.
-    public func addListner(_ listner: @escaping Lambda) {
+    open override func addListner(_ listner: @escaping Lambda) {
         if !self.laterEmits.isEmpty {
             self.laterEmits.forEach { listner($0) }
         }
@@ -38,13 +39,13 @@ class PastEvent<Input>: Event {
     /// Notify all listners.
     ///
     /// - Parameter input: Data for listners.
-    public func invoke(with input: Input) {
+    open override func invoke(with input: Input) {
         self.laterEmits.append(input)
         self.listners.forEach({ $0(input) })
     }
 
     /// Remove all listners and erase last emited value
-    public func clear() {
+    open override func clear() {
         self.laterEmits.removeAll()
         self.listners.removeAll()
     }
@@ -53,7 +54,12 @@ class PastEvent<Input>: Event {
 // MARK: - Operations
 
 extension PastEvent {
-    public static func += (left: PastEvent<Input>, right: @escaping Lambda) {
-        left.addListner(right)
+    open static func += (left: PastEvent<Input>, right: Lambda?) {
+
+        guard let guardedRight = right else {
+            return
+        }
+
+        left.addListner(guardedRight)
     }
 }

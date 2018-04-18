@@ -14,32 +14,33 @@
 /// Provides `+=` operation for adding new listners: `event += { value in ... }`
 ///
 /// `Input` - it's a type of value this event will emit.
-public class FutureEvent<Input>: Event {
+open class FutureEvent<Input>: Event<Input> {
 
     public typealias Lambda = (Input) -> Void
 
     private var listners: [Lambda]
 
-    public init() {
+    public override init() {
         self.listners = []
+        super.init()
     }
     
     /// Add new listner.
     ///
     /// - Parameter listner: New listner.
-    public func addListner(_ listner: @escaping Lambda) {
+    open override func addListner(_ listner: @escaping Lambda) {
         self.listners.append(listner)
     }
 
     /// Notify all listners.
     ///
     /// - Parameter input: Data for listners.
-    public func invoke(with input: Input) {
+    open override func invoke(with input: Input) {
         self.listners.forEach({ $0(input) })
     }
 
     /// Remove all listners.
-    public func clear() {
+    open override func clear() {
         self.listners.removeAll()
     }
 }
@@ -47,7 +48,11 @@ public class FutureEvent<Input>: Event {
 // MARK: - Operations
 
 extension FutureEvent {
-    public static func += (left: FutureEvent<Input>, right: @escaping Lambda) {
-        left.addListner(right)
+    open static func += (left: FutureEvent<Input>, right: Lambda?) {
+        guard let guardedRight = right else {
+            return
+        }
+
+        left.addListner(guardedRight)
     }
 }

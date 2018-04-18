@@ -7,7 +7,7 @@
 //
 
 /// Like classic event, but provide syntactic sugar for emit Void.
-public protocol EmptyEvent {
+public protocol EmptyEventProtocol {
 
     typealias Lambda = () -> Void
 
@@ -21,4 +21,22 @@ public protocol EmptyEvent {
 
     /// Remove all listners.
     func clear()
+}
+
+/// Just type erasure for `EmptyEvent`
+open class EmptyEvent: EmptyEventProtocol {
+
+    public init() { }
+
+    open func addListner(_ listner: @escaping Lambda) {
+        fatalError("\(#function) should be overriden in child class")
+    }
+
+    open func invoke() {
+        fatalError("\(#function) should be overriden in child class")
+    }
+
+    open func clear() {
+        fatalError("\(#function) should be overriden in child class")
+    }
 }

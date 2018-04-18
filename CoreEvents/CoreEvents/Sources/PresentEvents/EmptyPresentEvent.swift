@@ -11,22 +11,23 @@
 /// This event emits **last old emited value and all new messages**.
 ///
 /// Provides `+=` operation for adding new listners: `event += { value in ... }`
-class EmptyPresentEvent: EmptyEvent {
+open class EmptyPresentEvent: EmptyEvent {
 
     public typealias Lambda = () -> Void
 
     private var listners: [Lambda]
     private var didEmits: Bool
 
-    public init() {
+    public override init() {
         self.listners = []
         self.didEmits = false
+        super.init()
     }
 
     /// Add new listner and emits last emited message only for this listner.
     ///
     /// - Parameter listner: New listner.
-    public func addListner(_ listner: @escaping Lambda) {
+    open override func addListner(_ listner: @escaping Lambda) {
         if self.didEmits {
             listner()
         }
@@ -34,13 +35,13 @@ class EmptyPresentEvent: EmptyEvent {
     }
 
     /// Notify all listners.
-    public func invoke() {
+    open override func invoke() {
         self.didEmits = true
         self.listners.forEach({ $0() })
     }
 
     /// Remove all listners and erase last emited value
-    public func clear() {
+    open override func clear() {
         self.didEmits = false
         self.listners.removeAll()
     }
@@ -49,7 +50,11 @@ class EmptyPresentEvent: EmptyEvent {
 // MARK: - Operations
 
 extension EmptyPresentEvent {
-    public static func += (left: EmptyPresentEvent, right: @escaping Lambda) {
-        left.addListner(right)
+    open static func += (left: EmptyPresentEvent, right: Lambda?) {
+        guard let guardedRight = right else {
+            return
+        }
+
+        left.addListner(guardedRight)
     }
 }
