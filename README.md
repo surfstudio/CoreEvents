@@ -1,4 +1,4 @@
-# EventsKit
+# CoreEvents
 Small Swift events kit that provides some base types of events:
 - `FutureEvent`
 - `PresentEvent`
@@ -50,7 +50,7 @@ It means if your event already emits value and you add new listener then yout li
 ### Example
 
 ```swift
-var event = FutureEvent<Int>()
+var event = PresentEvent<Int>()
 
 event += { value in
   print("Awesome int: \(value)")
@@ -83,7 +83,7 @@ This event like Present, but emits all previous messages for new listner
 ### Example
 
 ```swift
-var event = FutureEvent<Int>()
+var event = PastEvent<Int>()
 
 event.invoke(with: 0)
 event.invoke(with: 1)
@@ -106,4 +106,4 @@ Will print:
 
 ## How to install
 
-`pod 'EventsKit', '~> 1.0.0'`
+`pod 'CoreEvents', '~> 1.0.0'`
