@@ -48,6 +48,11 @@ open class PresentEvent<Input>: Event<Input> {
         self.lastEmitedMessage = nil
         self.listners.removeAll()
     }
+
+    /// Remove last emited value.
+    open func eraseLastEmited() {
+        self.lastEmitedMessage = nil
+    }
 }
 
 // MARK: - Operations

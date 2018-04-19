@@ -45,6 +45,11 @@ open class EmptyPresentEvent: EmptyEvent {
         self.didEmits = false
         self.listners.removeAll()
     }
+
+    /// Remove last emited value.
+    open func eraseLastEmited() {
+        self.didEmits = false
+    }
 }
 
 // MARK: - Operations

@@ -196,4 +196,35 @@ class PresentEventTest: XCTestCase {
 
         XCTAssertEqual(emited.count, 1)
     }
+
+    func testThatClearLastEmitedWotkSuccess() {
+        // Arrange
+
+        let emiter = EventContainer()
+        let firstMessage = "Hello world"
+        let lastMessage = "Hello (:"
+
+        // Act
+
+        var allEmited = [String]()
+
+        emiter.event += { value in
+            allEmited.append(value)
+        }
+
+        emiter.emit(value: firstMessage)
+        emiter.event.eraseLastEmited()
+        var newEmited = [String]()
+
+        emiter.event += { value in
+            newEmited.append(value)
+        }
+
+        emiter.emit(value: lastMessage)
+
+        // Assert
+
+        XCTAssertEqual(newEmited.count, allEmited.count - 1)
+        XCTAssertEqual(newEmited.first, allEmited.last)
+    }
 }
