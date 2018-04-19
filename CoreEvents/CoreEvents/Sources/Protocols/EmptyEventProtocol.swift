@@ -39,4 +39,11 @@ open class EmptyEvent: EmptyEventProtocol {
     open func clear() {
         fatalError("\(#function) should be overriden in child class")
     }
+
+    open static func += (left: EmptyEvent, right: Lambda?) {
+        guard let right = right else {
+            return
+        }
+        left.addListner(right)
+    }
 }

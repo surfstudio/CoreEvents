@@ -44,15 +44,3 @@ open class FutureEvent<Input>: Event<Input> {
         self.listners.removeAll()
     }
 }
-
-// MARK: - Operations
-
-extension FutureEvent {
-    open static func += (left: FutureEvent<Input>, right: Lambda?) {
-        guard let guardedRight = right else {
-            return
-        }
-
-        left.addListner(guardedRight)
-    }
-}

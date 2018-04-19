@@ -42,4 +42,11 @@ open class Event<Input>: EventProtocol {
     open func clear() {
         fatalError("\(#function) should be overriden in child class")
     }
+
+    open static func += (left: Event<Input>, right: Lambda?) {
+        guard let right = right else {
+            return
+        }
+        left.addListner(right)
+    }
 }

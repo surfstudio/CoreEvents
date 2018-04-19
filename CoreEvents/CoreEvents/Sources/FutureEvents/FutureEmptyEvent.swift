@@ -33,12 +33,3 @@ open class FutureEmptyEvent: EmptyEvent {
         self.listners.removeAll()
     }
 }
-
-extension FutureEmptyEvent {
-    open static func += (left: FutureEmptyEvent, right: Lambda?) {
-        guard let right = right else {
-            return
-        }
-        left.addListner(right)
-    }
-}

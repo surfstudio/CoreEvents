@@ -50,16 +50,3 @@ open class PastEvent<Input>: Event<Input> {
         self.listners.removeAll()
     }
 }
-
-// MARK: - Operations
-
-extension PastEvent {
-    open static func += (left: PastEvent<Input>, right: Lambda?) {
-
-        guard let guardedRight = right else {
-            return
-        }
-
-        left.addListner(guardedRight)
-    }
-}

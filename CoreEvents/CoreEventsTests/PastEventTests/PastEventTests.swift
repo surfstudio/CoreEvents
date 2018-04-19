@@ -14,7 +14,7 @@ class PastEventTests: XCTestCase {
     // MARK: - Nested types
 
     private struct EventContainer {
-        var event = PastEvent<String>()
+        var event: Event<String> = PastEvent<String>()
 
         func emit(value: String) {
             event.invoke(with: value)
