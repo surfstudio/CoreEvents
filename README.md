@@ -106,4 +106,4 @@ Will print:
 
 ## How to install
 
-`pod 'CoreEvents', '~> 1.0.0'`
+`pod 'CoreEvents', '~> 1.1.1'`
