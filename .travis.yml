@@ -1,5 +1,5 @@
 language: Swift
-osx_image: xcode9.1
+osx_image: xcode9.3
 xcode_project: CoreEvents/CoreEvents.xcodeproj # path to your xcodeproj folder
 xcode_scheme: CoreEvents
 before_install:
@@ -8,4 +8,4 @@ before_install:
   - brew install swiftlint || true
 script:
   - set -o pipefail
-  - xcodebuild test -workspace CoreEvents/CoreEvents.xcworkspace -scheme CoreEvents -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.1' | xcpretty -c
+  - xcodebuild test -project CoreEvents/CoreEvents.xcodeproj -scheme CoreEventsTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.1' | xcpretty -c
