@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/LastSprint/CoreEvents.svg?branch=master)](https://travis-ci.org/LastSprint/CoreEvents)
 [![codebeat badge](https://codebeat.co/badges/44a2c9d4-97e6-4101-ab9f-2acef08cc151)](https://codebeat.co/projects/github-com-lastsprint-coreevents-master)
 ---
 # CoreEvents
