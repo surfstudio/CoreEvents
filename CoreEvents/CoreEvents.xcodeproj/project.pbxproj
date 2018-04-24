@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8B48A597208FE16F004A0266 /* CoreEvents_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B48A595208FE16F004A0266 /* CoreEvents_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B48A59C208FE232004A0266 /* CoreEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F71A2C2087BE2900E1B851 /* CoreEvents.framework */; };
 		8B48A59E208FE295004A0266 /* PresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A482087BE4900E1B851 /* PresentEvent.swift */; };
 		8B48A59F208FE298004A0266 /* EmptyPresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A492087BE4900E1B851 /* EmptyPresentEvent.swift */; };
 		8B48A5A0208FE29E004A0266 /* FutureValueEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A4B2087BE4900E1B851 /* FutureValueEvent.swift */; };
@@ -76,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B48A59C208FE232004A0266 /* CoreEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
