@@ -1,5 +1,5 @@
 //
-//  EmptyPresentEvent.swift
+//  PresentEmptyEvent.swift
 //  CoreEvents
 //
 //  Created by Alexander Kravchenkov on 13.04.2018.
@@ -11,7 +11,7 @@
 /// This event emits **last old emited value and all new messages**.
 ///
 /// Provides `+=` operation for adding new listners: `event += { value in ... }`
-open class EmptyPresentEvent: EmptyEvent {
+open class PresentEmptyEvent: EmptyEvent {
 
     public typealias Lambda = () -> Void
 
@@ -49,17 +49,5 @@ open class EmptyPresentEvent: EmptyEvent {
     /// Remove last emited value.
     open func eraseLastEmited() {
         self.didEmits = false
-    }
-}
-
-// MARK: - Operations
-
-extension EmptyPresentEvent {
-    open static func += (left: EmptyPresentEvent, right: Lambda?) {
-        guard let guardedRight = right else {
-            return
-        }
-
-        left.addListner(guardedRight)
     }
 }

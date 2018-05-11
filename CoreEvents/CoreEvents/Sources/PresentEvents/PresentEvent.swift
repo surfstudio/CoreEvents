@@ -54,15 +54,3 @@ open class PresentEvent<Input>: Event<Input> {
         self.lastEmitedMessage = nil
     }
 }
-
-// MARK: - Operations
-
-extension PresentEvent {
-    open static func += (left: PresentEvent<Input>, right: Lambda?) {
-        guard let guardedRight = right else {
-            return
-        }
-
-        left.addListner(guardedRight)
-    }
-}

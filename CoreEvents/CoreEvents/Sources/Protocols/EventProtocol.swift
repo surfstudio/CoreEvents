@@ -49,4 +49,14 @@ open class Event<Input>: EventProtocol {
         }
         left.addListner(right)
     }
+
+    open static func += (left: Event<Input>, right: Event<Input>?) {
+        guard let guardedRight = right else {
+            return
+        }
+
+        left.addListner { input in
+            guardedRight.invoke(with: input)
+        }
+    }
 }
