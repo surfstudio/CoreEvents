@@ -46,4 +46,14 @@ open class EmptyEvent: EmptyEventProtocol {
         }
         left.addListner(right)
     }
+
+    open static func += (left: EmptyEvent, right: EmptyEvent?) {
+        guard let guardedRight = right else {
+            return
+        }
+
+        left.addListner {
+            guardedRight.invoke()
+        }
+    }
 }
