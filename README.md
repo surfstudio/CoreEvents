@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/LastSprint/CoreEvents.svg?branch=master)](https://travis-ci.org/LastSprint/CoreEvents)
-[![codebeat badge](https://codebeat.co/badges/44a2c9d4-97e6-4101-ab9f-2acef08cc151)](https://codebeat.co/projects/github-com-lastsprint-coreevents-master)
+[![codebeat badge](https://codebeat.co/badges/4ced5e8d-8d44-4111-81df-0fb2012cbbb1)](https://codebeat.co/projects/github-com-surfstudio-coreevents-master)
 ---
 # CoreEvents
 Small Swift events kit that provides some base types of events:
