@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B48A597208FE16F004A0266 /* CoreEvents_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B48A595208FE16F004A0266 /* CoreEvents_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B48A59E208FE295004A0266 /* PresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A482087BE4900E1B851 /* PresentEvent.swift */; };
+		8B48A59F208FE298004A0266 /* EmptyPresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A492087BE4900E1B851 /* EmptyPresentEvent.swift */; };
+		8B48A5A0208FE29E004A0266 /* FutureValueEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A4B2087BE4900E1B851 /* FutureValueEvent.swift */; };
+		8B48A5A1208FE2A0004A0266 /* FutureEmptyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A4C2087BE4900E1B851 /* FutureEmptyEvent.swift */; };
+		8B48A5A2208FE2A3004A0266 /* FutureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A4D2087BE4900E1B851 /* FutureEvent.swift */; };
+		8B48A5A3208FE2A6004A0266 /* PastEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A4F2087BE4900E1B851 /* PastEvent.swift */; };
+		8B48A5A4208FE2AB004A0266 /* EmptyEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A512087BE4900E1B851 /* EmptyEventProtocol.swift */; };
+		8B48A5A5208FE2AD004A0266 /* EventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A522087BE4900E1B851 /* EventProtocol.swift */; };
+		8B48A5A6208FE2B0004A0266 /* ValueEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A532087BE4900E1B851 /* ValueEventProtocol.swift */; };
 		B9F71A362087BE2900E1B851 /* CoreEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F71A2C2087BE2900E1B851 /* CoreEvents.framework */; };
 		B9F71A3D2087BE2900E1B851 /* CoreEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F71A2F2087BE2900E1B851 /* CoreEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9F71A542087BE4900E1B851 /* PresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A482087BE4900E1B851 /* PresentEvent.swift */; };
@@ -36,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B48A593208FE16F004A0266 /* CoreEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B48A595208FE16F004A0266 /* CoreEvents_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreEvents_macOS.h; sourceTree = "<group>"; };
+		8B48A596208FE16F004A0266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9F71A2C2087BE2900E1B851 /* CoreEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F71A2F2087BE2900E1B851 /* CoreEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreEvents.h; sourceTree = "<group>"; };
 		B9F71A302087BE2900E1B851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +71,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8B48A58F208FE16F004A0266 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9F71A282087BE2800E1B851 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,12 +96,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B48A594208FE16F004A0266 /* CoreEvents macOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B48A595208FE16F004A0266 /* CoreEvents_macOS.h */,
+				8B48A596208FE16F004A0266 /* Info.plist */,
+			);
+			path = "CoreEvents macOS";
+			sourceTree = "<group>";
+		};
+		8B48A59B208FE232004A0266 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9F71A222087BE2800E1B851 = {
 			isa = PBXGroup;
 			children = (
 				B9F71A2E2087BE2900E1B851 /* CoreEvents */,
 				B9F71A392087BE2900E1B851 /* CoreEventsTests */,
+				8B48A594208FE16F004A0266 /* CoreEvents macOS */,
 				B9F71A2D2087BE2900E1B851 /* Products */,
+				8B48A59B208FE232004A0266 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +128,7 @@
 			children = (
 				B9F71A2C2087BE2900E1B851 /* CoreEvents.framework */,
 				B9F71A352087BE2900E1B851 /* CoreEventsTests.xctest */,
+				8B48A593208FE16F004A0266 /* CoreEvents.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +231,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		8B48A590208FE16F004A0266 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B48A597208FE16F004A0266 /* CoreEvents_macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9F71A292087BE2800E1B851 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,6 +250,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8B48A592208FE16F004A0266 /* CoreEvents macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B48A59A208FE16F004A0266 /* Build configuration list for PBXNativeTarget "CoreEvents macOS" */;
+			buildPhases = (
+				8B48A58E208FE16F004A0266 /* Sources */,
+				8B48A58F208FE16F004A0266 /* Frameworks */,
+				8B48A590208FE16F004A0266 /* Headers */,
+				8B48A591208FE16F004A0266 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CoreEvents macOS";
+			productName = "CoreEvents macOS";
+			productReference = 8B48A593208FE16F004A0266 /* CoreEvents.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		B9F71A2B2087BE2800E1B851 /* CoreEvents */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9F71A402087BE2900E1B851 /* Build configuration list for PBXNativeTarget "CoreEvents" */;
@@ -249,6 +314,9 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Alexander Kravchenkov";
 				TargetAttributes = {
+					8B48A592208FE16F004A0266 = {
+						CreatedOnToolsVersion = 9.3;
+					};
 					B9F71A2B2087BE2800E1B851 = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -271,11 +339,19 @@
 			targets = (
 				B9F71A2B2087BE2800E1B851 /* CoreEvents */,
 				B9F71A342087BE2900E1B851 /* CoreEventsTests */,
+				8B48A592208FE16F004A0266 /* CoreEvents macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8B48A591208FE16F004A0266 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9F71A2A2087BE2800E1B851 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +369,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8B48A58E208FE16F004A0266 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B48A59F208FE298004A0266 /* EmptyPresentEvent.swift in Sources */,
+				8B48A5A6208FE2B0004A0266 /* ValueEventProtocol.swift in Sources */,
+				8B48A5A1208FE2A0004A0266 /* FutureEmptyEvent.swift in Sources */,
+				8B48A5A5208FE2AD004A0266 /* EventProtocol.swift in Sources */,
+				8B48A5A0208FE29E004A0266 /* FutureValueEvent.swift in Sources */,
+				8B48A59E208FE295004A0266 /* PresentEvent.swift in Sources */,
+				8B48A5A3208FE2A6004A0266 /* PastEvent.swift in Sources */,
+				8B48A5A2208FE2A3004A0266 /* FutureEvent.swift in Sources */,
+				8B48A5A4208FE2AB004A0266 /* EmptyEventProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9F71A272087BE2800E1B851 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,6 +424,62 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8B48A598208FE16F004A0266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "CoreEvents macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "AK.CoreEvents-macOS";
+				PRODUCT_NAME = CoreEvents;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		8B48A599208FE16F004A0266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "CoreEvents macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "AK.CoreEvents-macOS";
+				PRODUCT_NAME = CoreEvents;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		B9F71A3E2087BE2900E1B851 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,7 +532,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -441,7 +590,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -464,13 +614,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CoreEvents/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AK.CoreEvents;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = CoreEvents;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -489,13 +640,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CoreEvents/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AK.CoreEvents;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = CoreEvents;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,6 +695,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8B48A59A208FE16F004A0266 /* Build configuration list for PBXNativeTarget "CoreEvents macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B48A598208FE16F004A0266 /* Debug */,
+				8B48A599208FE16F004A0266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B9F71A262087BE2800E1B851 /* Build configuration list for PBXProject "CoreEvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
