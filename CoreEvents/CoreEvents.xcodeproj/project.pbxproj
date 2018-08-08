@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B48A597208FE16F004A0266 /* CoreEvents_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B48A595208FE16F004A0266 /* CoreEvents_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B48A59E208FE295004A0266 /* PresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A482087BE4900E1B851 /* PresentEvent.swift */; };
-		8B48A59F208FE298004A0266 /* EmptyPresentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A492087BE4900E1B851 /* EmptyPresentEvent.swift */; };
+		8B48A59F208FE298004A0266 /* PresentEmptyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A492087BE4900E1B851 /* PresentEmptyEvent.swift */; };
 		8B48A5A0208FE29E004A0266 /* FutureValueEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A4B2087BE4900E1B851 /* FutureValueEvent.swift */; };
 		8B48A5A1208FE2A0004A0266 /* FutureEmptyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A4C2087BE4900E1B851 /* FutureEmptyEvent.swift */; };
 		8B48A5A2208FE2A3004A0266 /* FutureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71A4D2087BE4900E1B851 /* FutureEvent.swift */; };
@@ -373,7 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B48A59F208FE298004A0266 /* EmptyPresentEvent.swift in Sources */,
+				8B48A59F208FE298004A0266 /* PresentEmptyEvent.swift in Sources */,
 				8B48A5A6208FE2B0004A0266 /* ValueEventProtocol.swift in Sources */,
 				8B48A5A1208FE2A0004A0266 /* FutureEmptyEvent.swift in Sources */,
 				8B48A5A5208FE2AD004A0266 /* EventProtocol.swift in Sources */,
