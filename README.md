@@ -109,4 +109,4 @@ Will print:
 
 ## How to install
 
-`pod 'CoreEvents', '~> 1.1.2'`
+`pod 'CoreEvents', '~> 1.2.0'`
