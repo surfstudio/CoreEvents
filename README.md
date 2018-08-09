@@ -110,3 +110,10 @@ Will print:
 ## How to install
 
 `pod 'CoreEvents', '~> 1.2.0'`
+
+## Versioning
+
+Version format is `x.y.z` where
+- x is major version number. Bumped only in major updates (implementaion changes, adding new functionality)
+- y is minor version number. Bumped only in minor updates (interface changes)
+- z is minor version number. Bumped in case of bug fixes and e.t.c.
