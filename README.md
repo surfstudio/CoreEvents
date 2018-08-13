@@ -117,3 +117,9 @@ Version format is `x.y.z` where
 - x is major version number. Bumped only in major updates (implementaion changes, adding new functionality)
 - y is minor version number. Bumped only in minor updates (interface changes)
 - z is minor version number. Bumped in case of bug fixes and e.t.c.
+
+## Author
+
+[Kravchenkov Alexander](https://github.com/LastSprint)
+
+[MIT License](https://github.com/surfstudio/CoreEvents/blob/master/LICENSE)
