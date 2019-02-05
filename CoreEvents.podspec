@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
 
   s.name         = "CoreEvents"
-  s.version      = "1.2.0"
+  s.version      = "1.2.1"
   s.summary      = "Small library contains rx-like events."
 
   s.description  = <<-DESC
-  This library contains object represents Events (like C# event). 
+  This library contains object represents Events (like C# event).
   This may simplify things like: pub/sub, delegation, notification and other.
                    DESC
 
