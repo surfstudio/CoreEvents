@@ -319,9 +319,11 @@
 					};
 					B9F71A2B2087BE2800E1B851 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 					};
 					B9F71A342087BE2900E1B851 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -623,7 +625,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AK.CoreEvents;
 				PRODUCT_NAME = CoreEvents;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -649,7 +651,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AK.CoreEvents;
 				PRODUCT_NAME = CoreEvents;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -668,7 +670,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AK.CoreEventsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -687,7 +689,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AK.CoreEventsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
