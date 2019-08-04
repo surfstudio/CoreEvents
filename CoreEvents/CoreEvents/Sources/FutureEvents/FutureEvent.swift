@@ -20,15 +20,15 @@ open class FutureEvent<Input>: Event<Input> {
         super.init()
     }
 
-    open override func add(by key: String, _ listner: @escaping Closure) {
+    open override func add(key: String = #file, _ listner: @escaping Closure) {
         self.listners[key] = listner
     }
 
     open override func invoke(with input: Input) {
-        self.listners.keys.forEach { self.invoke(with: input, by: $0) }
+        self.listners.keys.forEach { self.invoke(with: input, key: $0) }
     }
 
-    open override func invoke(with input: Input, by key: String = #file) {
+    open override func invoke(with input: Input, key: String = #file) {
         self.listners[key]?(input)
     }
 
@@ -36,7 +36,7 @@ open class FutureEvent<Input>: Event<Input> {
         self.listners.removeAll()
     }
 
-    open override func remove(by key: String = #file) {
+    open override func remove(key: String = #file) {
         self.listners.removeValue(forKey: key)
     }
 }

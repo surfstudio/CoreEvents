@@ -15,7 +15,7 @@ open class Event<Input> {
     /// - Parameters:
     ///   - key: Ключ для добавления нового слушателя.
     ///   - listner: Слушатель.
-    open func add(by key: String = #file, _ listner: @escaping Closure) {
+    open func add(key: String = #file, _ listner: @escaping Closure) {
         fatalError("\(#function) should be overriden in child class")
     }
 
@@ -31,7 +31,7 @@ open class Event<Input> {
     /// - Parameters:
     ///   - input: Данные, которые будут переданы подписчику.
     ///   - key: Ключ подписчика, которого нужно оповестить.
-    open func invoke(with input: Input, by key: String = #file) {
+    open func invoke(with input: Input, key: String = #file) {
         fatalError("\(#function) should be overriden in child class")
     }
 
@@ -44,7 +44,7 @@ open class Event<Input> {
     /// Ожидается тот же ключ, что ыл добавлен в `add(by key: String = #file, _ listner: @escaping Closure)`
     ///
     /// - Parameter key: Ключ подписчика. По-умолчанию это `#file` так же как и для `addListener`
-    open func remove(by key: String = #file) {
+    open func remove(key: String = #file) {
         fatalError("\(#function) should be overriden in child class")
     }
 }

@@ -28,7 +28,7 @@ open class PresentEvent<Input>: Event<Input> {
     /// Добавляет нового слушателя и если есть запомненное сообщение, то сразу оповещает подписчикаю.
     ///
     /// - SeeAlso: `Event.add`
-    open override func add(by key: String = #file, _ listner: @escaping Closure) {
+    open override func add(key: String = #file, _ listner: @escaping Closure) {
         if let guardedLastRecived = self.lastEmitedMessage {
             listner(guardedLastRecived)
         }
@@ -40,14 +40,14 @@ open class PresentEvent<Input>: Event<Input> {
     ///
     /// - SeeAlso: `Event.invoke(with input: Input)`
     open override func invoke(with input: Input) {
-        self.listners.keys.forEach { self.invoke(with: input, by: $0) }
+        self.listners.keys.forEach { self.invoke(with: input, key: $0) }
     }
 
     /// Оповещает конкретного подписчика.
     /// Запоминает сообщение
     ///
     /// - SeeAlso: `Event.invoke(with input: Input, by key: String)`
-    open override func invoke(with input: Input, by key: String = #file) {
+    open override func invoke(with input: Input, key: String = #file) {
         self.lastEmitedMessage = input
         self.listners[key]?(input)
     }
@@ -61,7 +61,7 @@ open class PresentEvent<Input>: Event<Input> {
         self.listners.removeAll()
     }
 
-    open override func remove(by key: String = #file) {
+    open override func remove(key: String = #file) {
         self.listners.removeValue(forKey: key)
     }
 

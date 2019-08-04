@@ -23,7 +23,7 @@ open class PastEvent<Input>: Event<Input> {
         super.init()
     }
 
-    open override func add(by key: String = #file, _ listner: @escaping Closure) {
+    open override func add(key: String = #file, _ listner: @escaping Closure) {
         if !self.laterEmits.isEmpty {
             self.laterEmits.forEach { listner($0) }
         }
@@ -31,10 +31,10 @@ open class PastEvent<Input>: Event<Input> {
     }
 
     open override func invoke(with input: Input) {
-        self.listners.keys.forEach { self.invoke(with: input, by: $0) }
+        self.listners.keys.forEach { self.invoke(with: input, key: $0) }
     }
 
-    open override func invoke(with input: Input, by key: String = #file) {
+    open override func invoke(with input: Input, key: String = #file) {
         self.laterEmits.append(input)
         self.listners[key]?(input)
     }
@@ -44,7 +44,7 @@ open class PastEvent<Input>: Event<Input> {
         self.listners.removeAll()
     }
 
-    open override func remove(by key: String = #file) {
+    open override func remove(key: String = #file) {
         self.listners.removeValue(forKey: key)
     }
 }
