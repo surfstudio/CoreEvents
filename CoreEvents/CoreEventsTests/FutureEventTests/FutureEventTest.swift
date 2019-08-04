@@ -1,17 +1,9 @@
-//
-//  EventKitTests.swift
-//  CoreEventsTests
-//
-//  Created by Alexander Kravchenkov on 13.04.2018.
-//  Copyright © 2018 Alexander Kravchenkov. All rights reserved.
-//
-
 import XCTest
 @testable import CoreEvents
 
 class FutureEventTest: XCTestCase {
 
-    // MARK: - Nested types
+    // MARK: - Nested
 
     private struct EventContainer {
         var event = FutureEvent<String>()
@@ -21,17 +13,7 @@ class FutureEventTest: XCTestCase {
         }
     }
 
-    // MARK: - Lifecycle
-
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
-
-    // MARK: - Positive tests
+    // MARK: - Assert Success
 
     func testThatEventEmitsValue() {
 
@@ -44,7 +26,7 @@ class FutureEventTest: XCTestCase {
 
         var emited: String?
 
-        emiter.event += { value in
+        emiter.event.add { value in
             emited = value
         }
 
@@ -55,7 +37,7 @@ class FutureEventTest: XCTestCase {
         XCTAssertEqual(message, emited)
     }
 
-    func testThatEventCanEmitMulticast() {
+    func testManyListnersFrom1FileProduce1Emit() {
         // Arrange
 
         let emiter = EventContainer()
@@ -67,7 +49,7 @@ class FutureEventTest: XCTestCase {
         var emited = [String]()
 
         for _ in 0..<listenersCount {
-            emiter.event += { value in
+            emiter.event.add { value in
                 emited.append(value)
             }
         }
@@ -76,7 +58,7 @@ class FutureEventTest: XCTestCase {
 
         // Assert
 
-        XCTAssertEqual(emited.count, listenersCount)
+        XCTAssertEqual(emited.count, 1)
         emited.forEach { XCTAssertEqual($0, message) }
     }
 
@@ -91,7 +73,7 @@ class FutureEventTest: XCTestCase {
 
         var emited = [String]()
 
-        emiter.event += { value in
+        emiter.event.add { value in
             emited.append(value)
         }
 
@@ -105,37 +87,6 @@ class FutureEventTest: XCTestCase {
         emited.forEach { XCTAssertEqual($0, message) }
     }
 
-    func testThatEventDoesntEmitOldMessagesForNewListner() {
-        // Arrange
-
-        let emiter = EventContainer()
-        let firstMessage = "Hello world"
-        let lastMessage = "Hello (:"
-
-        // Act
-
-        var allEmited = [String]()
-
-        emiter.event += { value in
-            allEmited.append(value)
-        }
-
-        emiter.emit(value: firstMessage)
-
-        var newEmited = [String]()
-
-        emiter.event += { value in
-            newEmited.append(value)
-        }
-
-        emiter.emit(value: lastMessage)
-
-        // Assert
-
-        XCTAssertEqual(newEmited.count, allEmited.count - 1)
-        XCTAssertEqual(newEmited.first, lastMessage)
-    }
-
     func testThatClearMethodWorkSuccess() {
         // Arrange
 
@@ -147,7 +98,7 @@ class FutureEventTest: XCTestCase {
 
         var emited = [String]()
 
-        emiter.event += { value in
+        emiter.event.add { value in
             emited.append(value)
         }
 
@@ -155,7 +106,7 @@ class FutureEventTest: XCTestCase {
 
         emiter.event.clear()
 
-        emiter.event += { value in
+        emiter.event.add { value in
             emited.append(value)
         }
 
@@ -164,5 +115,76 @@ class FutureEventTest: XCTestCase {
         // Assert
 
         XCTAssertEqual(emited.count, 2)
+    }
+
+    func testAddingByKeySuccess() {
+        // Arrange
+
+        let emiter = EventContainer()
+
+        var firstEmited = [String]()
+        var lastEmited = [String]()
+
+        // Act
+
+        emiter.event.add(key: "1") { firstEmited.append($0) }
+        emiter.event.add(key: "2") { lastEmited.append($0) }
+
+        emiter.emit(value: "Hello World")
+
+        // Assret
+
+        XCTAssertEqual(firstEmited.count, 1)
+        XCTAssertEqual(lastEmited.count, 1)
+    }
+
+    func testRemovingByKeySuccess() {
+        // Arrange
+
+        let emiter = EventContainer()
+
+        var firstEmited = [String]()
+        var lastEmited = [String]()
+
+        // Act
+
+        emiter.event.add(key: "1") { firstEmited.append($0) }
+        emiter.event.add(key: "2") { lastEmited.append($0) }
+
+        emiter.emit(value: "Hello World")
+
+        // Assret
+
+        emiter.event.remove(key: "1")
+
+        emiter.emit(value: "Hello World")
+
+        XCTAssertEqual(firstEmited.count, 1)
+        XCTAssertEqual(lastEmited.count, 2)
+    }
+
+    func testRemovingByDefaultKeySuccess() {
+        // Arrange
+
+        let emiter = EventContainer()
+
+        var firstEmited = [String]()
+        var lastEmited = [String]()
+
+        // Act
+
+        emiter.event.add { firstEmited.append($0) }
+        emiter.event.add(key: "2") { lastEmited.append($0) }
+
+        emiter.emit(value: "Hello World")
+
+        // Assret
+
+        emiter.event.remove()
+
+        emiter.emit(value: "Hello World")
+
+        XCTAssertEqual(firstEmited.count, 1)
+        XCTAssertEqual(lastEmited.count, 2)
     }
 }

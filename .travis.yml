@@ -1,5 +1,5 @@
 language: Swift
-osx_image: xcode9.3
+osx_image: xcode10.2
 xcode_project: CoreEvents/CoreEvents.xcodeproj # path to your xcodeproj folder
 xcode_scheme: CoreEvents
 before_install:
@@ -9,3 +9,5 @@ before_install:
 script:
   - set -o pipefail
   - xcodebuild test -project CoreEvents/CoreEvents.xcodeproj -scheme CoreEventsTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.1' | xcpretty -c
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t db8e8134-39fd-487b-b598-912fc126cc71

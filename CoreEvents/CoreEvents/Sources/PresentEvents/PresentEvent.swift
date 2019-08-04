@@ -6,50 +6,66 @@
 //  Copyright © 2018 Alexander Kravchenkov. All rights reserved.
 //
 
-/// Present event is like Present time in English.
+/// Это событие запоминает последнее сообщение,
+/// которое было отправлено подписчикам и в случае добалвения нового подписчика с
+/// разу отправляет ему это сообщение.
 ///
-/// This event emits **last old emited value and all new messages**.
+/// Этот тип событий можно использовать для того, чтобы оповещать подписчиков после того, как сообщение было послано.
 ///
-/// Provides `+=` operation for adding new listners: `event += { value in ... }`
-///
-/// `Input` - it's a type of value this event will emit.
+/// - SeeAlso: `Event`
 open class PresentEvent<Input>: Event<Input> {
 
-    public typealias Lambda = (Input) -> Void
+    public typealias Closure = (Input) -> Void
 
-    private var listners: [Lambda]
+    private var listners: [String: Closure]
     private var lastEmitedMessage: Input?
 
     public override init() {
-        self.listners = []
+        self.listners = [:]
         super.init()
     }
 
-    /// Add new listner and emits last emited message only for this listner.
+    /// Добавляет нового слушателя и если есть запомненное сообщение, то сразу оповещает подписчикаю.
     ///
-    /// - Parameter listner: New listner.
-    open override func addListner(_ listner: @escaping Lambda) {
+    /// - SeeAlso: `Event.add`
+    open override func add(key: String = #file, _ listner: @escaping Closure) {
         if let guardedLastRecived = self.lastEmitedMessage {
             listner(guardedLastRecived)
         }
-        self.listners.append(listner)
+        self.listners[key] = listner
     }
 
-    /// Notify all listners.
+    /// Оповещает всех слушателей.
+    /// Запоминает сообщение.
     ///
-    /// - Parameter input: Data for listners.
+    /// - SeeAlso: `Event.invoke(with input: Input)`
     open override func invoke(with input: Input) {
-        self.lastEmitedMessage = input
-        self.listners.forEach({ $0(input) })
+        self.listners.keys.forEach { self.invoke(with: input, key: $0) }
     }
 
-    /// Remove all listners and erase last emited value
+    /// Оповещает конкретного подписчика.
+    /// Запоминает сообщение
+    ///
+    /// - SeeAlso: `Event.invoke(with input: Input, by key: String)`
+    open override func invoke(with input: Input, key: String = #file) {
+        self.lastEmitedMessage = input
+        self.listners[key]?(input)
+    }
+
+    /// Удаляет всех подписчиков.
+    /// В том числе удаляет последнее запомненное сообщение.
+    ///
+    /// - SeeAlso: `Event.clear`
     open override func clear() {
         self.lastEmitedMessage = nil
         self.listners.removeAll()
     }
 
-    /// Remove last emited value.
+    open override func remove(key: String = #file) {
+        self.listners.removeValue(forKey: key)
+    }
+
+    /// Удаляет последнее заполненное сообщение.
     open func eraseLastEmited() {
         self.lastEmitedMessage = nil
     }

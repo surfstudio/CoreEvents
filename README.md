@@ -1,5 +1,6 @@
-[![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
+[![Build Status](https://travis-ci.org/surfstudio/CoreEvents.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
 [![codebeat badge](https://codebeat.co/badges/4ced5e8d-8d44-4111-81df-0fb2012cbbb1)](https://codebeat.co/projects/github-com-surfstudio-coreevents-master)
+[![codecov](https://codecov.io/gh/surfstudio/CoreEvents/branch/master/graph/badge.svg)](https://codecov.io/gh/surfstudio/CoreEvents)
 
 # CoreEvents
 Small Swift events kit that provides some base types of events:
@@ -7,12 +8,10 @@ Small Swift events kit that provides some base types of events:
 - [`PresentEvent`](#presentevent)
 - [`PastEvent`](#pastevent)
 
-Each this type may implement some Event protocols:
-- `Event` it's a object that contains any listners (swift closures) with one template parameter - emited value type.
-- `EmptyEvent` it's syntactic sugar for `Event` with Void template parameter.
-- `ValueEvent` it's event, that can contain **only** one listner and this listner should get and **return** value. This protocol contains contains two template parameters.
-
 ## FutureEvent
+
+Simple event. 
+Provides classic behaviour.
 
 ### Description
 
@@ -21,8 +20,6 @@ This event emit **only** new messages. It means that if you add new listner to e
 
 ### Types
 - `FutureEvent: Event`
-- `FutureEmptyEvent: EmptyEvent`
-- `FutureValueEvent: ValueEvent`
 
 ### Example
 
@@ -48,7 +45,6 @@ It means if your event already emits value and you add new listener then yout li
 
 ### Types
 - `PresentEvent: Event`
-- `PresentEmptyEvent: EmptyEvent`
 
 ### Example
 
@@ -110,6 +106,10 @@ Will print:
 ## How to install
 
 `pod 'CoreEvents', '~> 1.2.0'`
+
+## Warning 
+
+In one file you can not use just `add`, you chould specify a key - `add(key: String, _ listener: Closure)`
 
 ## Versioning
 

@@ -6,41 +6,37 @@
 //  Copyright © 2018 Alexander Kravchenkov. All rights reserved.
 //
 
-/// Future event is like Future time in English.
+/// Это обыкновенное событие, которое не хранит предыдущих сообщений.
 ///
-/// This event emits **only** new messages.
-/// It's classic behaviour for event.
-///
-/// Provides `+=` operation for adding new listners: `event += { value in ... }`
-///
-/// `Input` - it's a type of value this event will emit.
+/// - SeeAlso: `Event`
 open class FutureEvent<Input>: Event<Input> {
 
-    public typealias Lambda = (Input) -> Void
+    public typealias Closure = (Input) -> Void
 
-    private var listners: [Lambda]
+    private var listners: [String: Closure]
 
     public override init() {
-        self.listners = []
+        self.listners = [:]
         super.init()
     }
-    
-    /// Add new listner.
-    ///
-    /// - Parameter listner: New listner.
-    open override func addListner(_ listner: @escaping Lambda) {
-        self.listners.append(listner)
+
+    open override func add(key: String = #file, _ listner: @escaping Closure) {
+        self.listners[key] = listner
     }
 
-    /// Notify all listners.
-    ///
-    /// - Parameter input: Data for listners.
     open override func invoke(with input: Input) {
-        self.listners.forEach({ $0(input) })
+        self.listners.keys.forEach { self.invoke(with: input, key: $0) }
     }
 
-    /// Remove all listners.
+    open override func invoke(with input: Input, key: String = #file) {
+        self.listners[key]?(input)
+    }
+
     open override func clear() {
         self.listners.removeAll()
+    }
+
+    open override func remove(key: String = #file) {
+        self.listners.removeValue(forKey: key)
     }
 }
