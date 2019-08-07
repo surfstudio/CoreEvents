@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/surfstudio/CoreEvents.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
 [![codebeat badge](https://codebeat.co/badges/4ced5e8d-8d44-4111-81df-0fb2012cbbb1)](https://codebeat.co/projects/github-com-surfstudio-coreevents-master)
-[![codecov](https://codecov.io/gh/surfstudio/CoreEvents/branch/master/graph/badge.svg)](https://codecov.io/gh/surfstudio/CoreEvents)
+[![codecov](https://codecov.io/gh/surfstudio/CoreEvents/branch/master/graph/badge.svg)](https://codecov.io/gh/surfstudio/CoreEvents/branch/master/graph/badge.svg)
 
 # CoreEvents
 Small Swift events kit that provides some base types of events:
