@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
   s.author = { "Alexander Kravchenkov" => "a.a.kravchenkov@gmail.com" }
 
   s.ios.deployment_target = "9.0"
+  s.osx.deployment_target = "10.15"
 
   s.source = { :git => "https://github.com/surfstudio/CoreEvents.git", :tag => "#{s.version}" }
 
