@@ -15,8 +15,8 @@ Provides classic behaviour.
 
 ### Description
 
-This is classic event (like C# `event`) that can contains many listners and multicast each new message for this listners.
-This event emit **only** new messages. It means that if you add new listner to existed event this event doesn't emit previous messages to new listner.
+This is classic event (like C# `event`) that can contain many listeners and multicast each new message for this listeners.
+This event emits **only** new messages. It means if you add a new listener to existed event then last will not emit previous messages to the new listener.
 
 ### Types
 - `FutureEvent: Event`
@@ -40,8 +40,8 @@ will print `Awesome int: 42`
 
 ### Description
 
-This event provide all `Future` logic, but additionally provide emits last emited value for new listner.
-It means if your event already emits value and you add new listener then yout listener handles previous emited value in the same time.
+This event provides all `Future` logic, but additionally provides emiting last emited value for a new listener.
+It means if your event already emits value and you add a new listener then your listener handles previous emited value in the same time.
 
 ### Types
 - `PresentEvent: Event`
@@ -73,7 +73,7 @@ will print:
 
 ### Description
 
-This event like Present, but emits all previous messages for new listner
+This event is like the Present, but emits all previous messages for a new listener
 
 ### Types
 
@@ -109,7 +109,7 @@ Will print:
 
 ## Warning 
 
-In one file you can not use just `add`, you chould specify a key - `add(key: String, _ listener: Closure)`
+In one file you can not use just `add`, you should specify a key - `add(key: String, _ listener: Closure)`
 
 ## Versioning
 
