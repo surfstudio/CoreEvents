@@ -7,8 +7,8 @@
 //
 
 /// Это событие запоминает последнее сообщение,
-/// которое было отправлено подписчикам и в случае добалвения нового подписчика с
-/// разу отправляет ему это сообщение.
+/// которое было отправлено подписчикам и в случае добавления нового подписчика
+/// cразу отправляет ему это сообщение.
 ///
 /// Этот тип событий можно использовать для того, чтобы оповещать подписчиков после того, как сообщение было послано.
 ///
@@ -17,22 +17,22 @@ open class PresentEvent<Input>: Event<Input> {
 
     public typealias Closure = (Input) -> Void
 
-    private var listners: [String: Closure]
+    private var listeners: [String: Closure]
     private var lastEmitedMessage: Input?
 
     public override init() {
-        self.listners = [:]
+        self.listeners = [:]
         super.init()
     }
 
-    /// Добавляет нового слушателя и если есть запомненное сообщение, то сразу оповещает подписчикаю.
+    /// Добавляет нового слушателя и если есть запомненное сообщение, то сразу оповещает подписчика.
     ///
     /// - SeeAlso: `Event.add`
-    open override func add(key: String = #file, _ listner: @escaping Closure) {
+    open override func add(key: String = #file, _ listener: @escaping Closure) {
         if let guardedLastRecived = self.lastEmitedMessage {
-            listner(guardedLastRecived)
+            listener(guardedLastRecived)
         }
-        self.listners[key] = listner
+        self.listeners[key] = listener
     }
 
     /// Оповещает всех слушателей.
@@ -40,7 +40,7 @@ open class PresentEvent<Input>: Event<Input> {
     ///
     /// - SeeAlso: `Event.invoke(with input: Input)`
     open override func invoke(with input: Input) {
-        self.listners.keys.forEach { self.invoke(with: input, key: $0) }
+        self.listeners.keys.forEach { self.invoke(with: input, key: $0) }
     }
 
     /// Оповещает конкретного подписчика.
@@ -49,7 +49,7 @@ open class PresentEvent<Input>: Event<Input> {
     /// - SeeAlso: `Event.invoke(with input: Input, by key: String)`
     open override func invoke(with input: Input, key: String = #file) {
         self.lastEmitedMessage = input
-        self.listners[key]?(input)
+        self.listeners[key]?(input)
     }
 
     /// Удаляет всех подписчиков.
@@ -58,11 +58,11 @@ open class PresentEvent<Input>: Event<Input> {
     /// - SeeAlso: `Event.clear`
     open override func clear() {
         self.lastEmitedMessage = nil
-        self.listners.removeAll()
+        self.listeners.removeAll()
     }
 
     open override func remove(key: String = #file) {
-        self.listners.removeValue(forKey: key)
+        self.listeners.removeValue(forKey: key)
     }
 
     /// Удаляет последнее заполненное сообщение.

@@ -14,37 +14,37 @@ open class PastEvent<Input>: Event<Input> {
 
     public typealias Closure = (Input) -> Void
 
-    private var listners: [String: Closure]
+    private var listeners: [String: Closure]
     private var laterEmits: [Input]
 
     public override init() {
         self.laterEmits = [Input]()
-        self.listners = [:]
+        self.listeners = [:]
         super.init()
     }
 
-    open override func add(key: String = #file, _ listner: @escaping Closure) {
+    open override func add(key: String = #file, _ listener: @escaping Closure) {
         if !self.laterEmits.isEmpty {
-            self.laterEmits.forEach { listner($0) }
+            self.laterEmits.forEach { listener($0) }
         }
-        self.listners[key] = listner
+        self.listeners[key] = listener
     }
 
     open override func invoke(with input: Input) {
-        self.listners.keys.forEach { self.invoke(with: input, key: $0) }
+        self.listeners.keys.forEach { self.invoke(with: input, key: $0) }
     }
 
     open override func invoke(with input: Input, key: String = #file) {
         self.laterEmits.append(input)
-        self.listners[key]?(input)
+        self.listeners[key]?(input)
     }
 
     open override func clear() {
         self.laterEmits.removeAll()
-        self.listners.removeAll()
+        self.listeners.removeAll()
     }
 
     open override func remove(key: String = #file) {
-        self.listners.removeValue(forKey: key)
+        self.listeners.removeValue(forKey: key)
     }
 }
