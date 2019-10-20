@@ -24,7 +24,6 @@ class PastEventTests: XCTestCase {
     // MARK: - Success Assert
 
     func testEventEmitsValue() {
-
         // Arrange
 
         let emiter = EventContainer()
@@ -45,7 +44,7 @@ class PastEventTests: XCTestCase {
         XCTAssertEqual(message, emited)
     }
 
-    func testManyListnersFrom1FileProduce1Emit() {
+    func testManyListenersFrom1FileProduce1Emit() {
         // Arrange
 
         let emiter = EventContainer()
@@ -127,7 +126,7 @@ class PastEventTests: XCTestCase {
         XCTAssertEqual(newEmited.count, 3)
     }
 
-    func testClearMethodWorkSuccess() {
+    func testClearMethodWorksSuccess() {
         // Arrange
 
         let emiter = EventContainer()
@@ -168,7 +167,7 @@ class PastEventTests: XCTestCase {
 
         emiter.emit(value: "Hello World")
 
-        // Assret
+        // Assert
 
         XCTAssertEqual(firstEmited.count, 1)
         XCTAssertEqual(lastEmited.count, 1)
@@ -189,7 +188,7 @@ class PastEventTests: XCTestCase {
 
         emiter.emit(value: "Hello World")
 
-        // Assret
+        // Assert
 
         emiter.event.remove(key: "1")
 
@@ -214,7 +213,7 @@ class PastEventTests: XCTestCase {
 
         emiter.emit(value: "Hello World")
 
-        // Assret
+        // Assert
 
         emiter.event.remove()
 
