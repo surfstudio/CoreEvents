@@ -105,7 +105,11 @@ Will print:
 
 ## How to install
 
-`pod 'CoreEvents', '~> 2.0.0'`
+`pod 'CoreEvents', '~> 2.0.1'`
+
+We also support SPM: 
+
+`.package(url: "https://github.com/surfstudio/CoreEvents", .exact("2.0.2"))`
 
 ## Warning 
 
